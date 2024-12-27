@@ -84,3 +84,108 @@ button {
     left: 0;
     pointer-events: none;
 }
+
+.container {
+    padding: 96px;
+
+    &-header {
+        padding: 24px 45px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: unset;
+    }
+}
+
+.plantin {
+    font-family: 'Plantin', serif;
+}
+
+.eaves {
+    font-family: 'MrEavesModOT', sans-serif;
+}
+
+.t {
+    &-uppercase {
+        text-transform: uppercase;
+    }
+
+    &-capitalize {
+        text-transform: capitalize;
+    }
+
+    &-center {
+        text-align: center;
+    }
+
+    &-right {
+        text-align: right;
+    }
+
+    &-left {
+        text-align: left;
+    }
+
+    &-justify {
+        text-align: justify;
+    }
+
+    &-bold {
+        font-weight: bold;
+    }
+
+    &-italic {
+        font-style: italic;
+    }
+
+    &-underline {
+        text-decoration: underline;
+    }
+}
+
+.lh {
+    &-100 {
+        line-height: 100%;
+    }
+
+    &-110 {
+        line-height: 110%;
+    }
+
+    &-120 {
+        line-height: 120%;
+    }
+
+    &-130 {
+        line-height: 130%;
+    }
+}
+
+.color {
+    &-white {
+        color: $white;
+
+        a {
+            color: $white;
+        }
+    }
+
+    &-black {
+        color: $black;
+
+        a {
+            color: $black;
+        }
+    }
+}
+
+.t {
+    &-10 {
+        font-size: 10px;
+    }
+
+    &-20 {
+        font-size: 20px;
+    }
+}

@@ -1,6 +1,6 @@
 <?php
 
-namespace JuiceBox\Modules\GoalsSection;
+namespace JuiceBox\Modules\Hero;
 
 use JuiceBox\Core\Module as JBModule;
 

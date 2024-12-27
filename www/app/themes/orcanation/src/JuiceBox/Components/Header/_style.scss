@@ -296,305 +296,65 @@
 // custom header styles
 
 .header {
-    display: flex;
-    align-items: center;
-    background-color: transparent;
-
     position: fixed;
+    top: 0;
+    left: 0;
+    background: black;
+
     width: 100%;
-    z-index: 99;
+    height: 150px;
 
-    &.scroll {
-        background-color: #fff;
-        box-shadow: 0 3px 25px 2px rgba(0, 0, 0, 0.1);
-    }
-
-    .container {
-        width: 100%;
-        margin: auto;
-        max-width: 1311px;
-        margin-right: 64px;
-        padding: unset;
-        margin-left: 64px;
-    }
+    // glass effect
+    //     background: rgba( 255, 255, 255, 0.25 );
+    // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    // backdrop-filter: blur( 6px );
+    // -webkit-backdrop-filter: blur( 6px );
+    // border-radius: 10px;
 
     &-wrap {
         display: flex;
-        justify-content: space-between;
-
-        &-item {
-            display: flex;
-            font-family: $kanit;
-
-            &-logo {
-                position: relative;
-                width: 100%;
-                height: 100%;
-                display: flex;
-
-                a {
-                    position: relative;
-                    display: flex;
-                }
-
-                svg {
-                    &:last-child {
-                        opacity: 0;
-                        position: absolute;
-                        transition: $transition-default;
-
-                        .scroll & {
-                            opacity: 1;
-                        }
-                    }
-                }
-            }
-
-            &-menu {
-                display: flex;
-                align-items: center;
-
-                .nav {
-                    display: flex;
-                    gap: 56px;
-                    font-size: 20px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 100%;
-
-                    li {
-                        a {
-                            color: var(--Brand-Colours-Secoundary-Colour---2, #fde8e4);
-
-                            .scroll & {
-                                color: $dark;
-                            }
-
-                            &:hover {
-                                color: $hover;
-                            }
-                        }
-                    }
-
-                    li:last-child {
-                        margin-right: 64px;
-                    }
-                }
-
-                &-item {
-                    &-button {
-                        &-toogle {
-                            background: transparent;
-                            border: transparent;
-                        }
-
-                        svg {
-                            path {
-                                stroke: $sand;
-                                transition: $transition-default;
-
-                                .scroll & {
-                                    stroke: $dark;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        justify-content: center;
+        align-items: center;
     }
 
-    &-slide {
-        width: 100%;
-        background: #fde8e4;
-        height: 100vh;
-        position: absolute;
-        top: 0;
-        left: 100%;
+    &-section {
+        width: 15%;
 
-        transition: $transition-default;
-
-        &.active {
-            left: 0;
-        }
-
-        &-bg {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            left: 0;
-            object-fit: cover;
-            opacity: 12%;
-            filter: grayscale(1);
-            pointer-events: none;
-        }
-
-        &-top {
+        &:nth-child(2) {
+            width: 70%;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            margin: 24px 64px;
+        }
 
-            .header__logo {
-                position: relative;
-
-                svg {
-                    &:last-child {
-                        position: absolute;
-                        transition: $transition-default;
-                        left: 0;
-                    }
-                }
-            }
-
-            &-close {
-                &-toogle {
-                    background: transparent;
-                    outline: none;
-                    border: none;
-                }
+        &:last-child {
+            .header-section-wrap {
+                gap: 16px;
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                align-items: end;
+                height: 100%;
             }
         }
 
         &-wrap {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            // gap: 77px;
-        }
-
-        &-main {
-            margin: 0px 80px;
-            display: flex;
-            justify-content: space-between;
-
-            height: 100%;
-            align-items: center;
-
-            .nav {
+            &-logo {
                 display: flex;
-                flex-direction: column;
-                text-align: left;
-
-                gap: 72px;
-
-                a {
-                    font-family: $kanit;
-                    font-size: 48px;
-                    font-weight: 400;
-                    line-height: 18px;
-                    text-align: left;
-                    color: $text-dark;
-                }
-
-                .menu-item-has-children {
-                    position: relative;
-
-                    .nav__toggle {
-                        display: none;
-                    }
-
-                    .nav__submenu {
-                        opacity: 1;
-                        z-index: 2;
-                        display: flex;
-                        flex-direction: column;
-                        left: 100%;
-                        top: 0;
-
-                        gap: 36px;
-                        width: 100%;
-                        pointer-events: auto;
-                        background-color: transparent;
-
-                        opacity: 0;
-                        pointer-events: none;
-                        transition: $transition-default;
-
-                        li {
-                            a {
-                                font-family: 'roboto';
-                                font-size: 24px;
-                                font-weight: 400;
-                                line-height: 24px;
-                                text-align: left;
-                            }
-                        }
-                    }
-
-                    &.active {
-                        .nav__submenu {
-                            opacity: 1;
-                            pointer-events: auto;
-                        }
-                    }
-                }
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 14px;
             }
 
             &-menu {
-                li {
-                    svg {
-                        opacity: 0;
-                        transition: $transition-default;
-                    }
+                display: flex;
+                gap: 40px;
+                align-items: center;
+                scale: 1.1;
+            }
 
-                    &:hover {
-                        a {
-                            color: $hover;
-                        }
-
-                        svg {
-                            opacity: 1;
-                        }
-                    }
-                }
-
-                &:last-child {
-                    padding: 0px 64px;
-                    position: relative;
-                    width: 35%;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 56px;
-
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        width: 1px;
-                        height: 130%;
-                        background: #1e1541;
-                        left: 0;
-                        top: -10%;
-                        opacity: 0.2;
-                    }
-                }
-
-                &-item {
-                    text-align: left;
-
-                    &-title {
-                        font-family: $kanit;
-                        font-size: 28px;
-                        font-weight: 400;
-                        line-height: 42px;
-                        text-align: left;
-                    }
-
-                    &-url {
-                        display: flex;
-                        align-items: center;
-                        gap: 8px;
-
-                        a {
-                            color: $dark;
-                            font-family: $kanit;
-                            font-size: 18px;
-                            font-weight: 400;
-                            line-height: 26.91px;
-                            text-align: left;
-                        }
-                    }
-                }
+            &-button {
+                width: 100%;
             }
         }
     }

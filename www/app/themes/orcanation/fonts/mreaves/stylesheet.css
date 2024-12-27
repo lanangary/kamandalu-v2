@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'MrEavesModOT';
+    src: url('MrEavesModOT-Reg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MrEavesModOT';
+    src: url('MrEavesModOT-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
