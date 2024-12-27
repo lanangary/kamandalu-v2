@@ -1,2 +1,2 @@
-# kamandalu-v2
+# Kamandalu
 Kamandalu Ubud
