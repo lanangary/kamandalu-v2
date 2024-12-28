@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: 'Plantin';
-    src: url('../../fonts/Plantin.woff') format('woff');
+    src: url('../../fonts/plantin/Plantin.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -12,7 +12,7 @@
 
 @font-face {
     font-family: 'Plantin';
-    src: url('../../fonts/Plantin-BoldItalic.woff') format('woff');
+    src: url('../../fonts/plantin/Plantin-BoldItalic.woff') format('woff');
     font-weight: bold;
     font-style: italic;
     font-display: swap;
@@ -20,7 +20,7 @@
 
 @font-face {
     font-family: 'Plantin';
-    src: url('../../fonts/Plantin-Italic.woff') format('woff');
+    src: url('../../fonts/plantin/Plantin-Italic.woff') format('woff');
     font-weight: normal;
     font-style: italic;
     font-display: swap;
@@ -28,7 +28,7 @@
 
 @font-face {
     font-family: 'Plantin';
-    src: url('../../fonts/Plantin-Bold.woff') format('woff');
+    src: url('../../fonts/plantin/Plantin-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -36,7 +36,7 @@
 
 @font-face {
     font-family: 'Plantin';
-    src: url('../../fonts/Plantin-Light.woff') format('woff');
+    src: url('../../fonts/plantin/Plantin-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -44,16 +44,16 @@
 
 @font-face {
     font-family: 'MrEavesModOT';
-    src: url('../../fonts/MrEavesModOT-Reg.woff') format('woff');
-    font-weight: normal;
+    src: url('../../fonts/mreaves/MrEavesModOT-Bold.woff') format('woff');
+    font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
     font-family: 'MrEavesModOT';
-    src: url('../../fonts/MrEavesModOT-Bold.woff') format('woff');
-    font-weight: bold;
+    src: url('../../fonts/mreaves/MrEavesModOT-Reg.woff') format('woff');
+    font-weight: normal;
     font-style: normal;
     font-display: swap;
 }

@@ -88,7 +88,7 @@ button {
 .module,
 .header {
     .container {
-        padding: 96px;
+        padding: 56px 96px;
 
         &-header {
             padding: 24px 45px;
@@ -98,6 +98,12 @@ button {
             align-items: center;
             max-width: unset;
         }
+    }
+}
+
+p {
+    &:last-child {
+        margin-bottom: 0;
     }
 }
 
@@ -181,6 +187,14 @@ button {
             color: $black;
         }
     }
+
+    &-grey {
+        color: $grey;
+
+        a {
+            color: $grey;
+        }
+    }
 }
 
 .t {
@@ -190,5 +204,13 @@ button {
 
     &-20 {
         font-size: 20px;
+    }
+
+    &-30 {
+        font-size: 30px;
+    }
+
+    &-32 {
+        font-size: 32px;
     }
 }
