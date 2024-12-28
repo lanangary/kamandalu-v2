@@ -85,16 +85,19 @@ button {
     pointer-events: none;
 }
 
-.container {
-    padding: 96px;
+.module,
+.header {
+    .container {
+        padding: 96px;
 
-    &-header {
-        padding: 24px 45px;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        max-width: unset;
+        &-header {
+            padding: 24px 45px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: unset;
+        }
     }
 }
 

@@ -1,4 +1,26 @@
 <div class="module padding-fluid hero">
+	<div class="hero-bg">
+		<div class="swiper">
+			<div class="swiper-wrapper">
+
+				{% for item in module.background %}
+					<div class="swiper-slide">
+						{% include 'partials/image.twig' with {
+						'image': item.image,
+						'classes': 'hero-bg-image',
+						'lazy': true
+					} %}
+					</div>
+				{% endfor %}
+			</div>
+			<!-- If we need pagination -->
+			<div class="swiper-pagination"></div>
+
+			<!-- If we need navigation buttons -->
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+		</div>
+	</div>
 	<div class="container">
 		<div class="hero-wrap"></div>
 	</div>

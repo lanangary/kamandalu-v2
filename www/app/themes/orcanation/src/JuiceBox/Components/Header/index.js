@@ -65,38 +65,5 @@ jQuery($ => {
         lastScroll = currentScroll;
     });
 
-    // header slide js
-
-    const headerSlidemain = document.querySelector('.header-slide-main');
-
-    let headerSlidehasChild = headerSlidemain.querySelectorAll('.menu-item-has-children');
-
-    headerSlidehasChild.forEach(item => {
-        item.addEventListener('click', e => {
-            e.preventDefault();
-
-            // close all other submenu
-            headerSlidehasChild.forEach(item => {
-                if (item !== e.currentTarget) {
-                    item.classList.remove('active');
-                }
-            });
-
-            item.classList.toggle('active');
-        });
-    });
-
-    let headerslideOpen = document.querySelector(
-        '.header-wrap-item-menu-item-button-toogle'
-    );
-    let headerSlideClose = document.querySelector('.header-slide-top-close-toogle');
-    let headerSlidewrap = document.querySelector('#header-slide-wrap');
-
-    headerslideOpen.addEventListener('click', () => {
-        headerSlidewrap.classList.add('active');
-    });
-
-    headerSlideClose.addEventListener('click', () => {
-        headerSlidewrap.classList.remove('active');
-    });
+    
 });

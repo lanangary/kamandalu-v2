@@ -15,4 +15,5 @@ import 'JBComponent/PageReader';
 
 // modules
 
-// import 'JBModule/HeroSlider';
+import 'JBModule/Hero';
+
