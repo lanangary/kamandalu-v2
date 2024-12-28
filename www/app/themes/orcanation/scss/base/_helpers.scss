@@ -35,3 +35,173 @@
         border: 0;
     }
 }
+
+.display {
+    &-flex {
+        display: flex;
+    }
+
+    &-inline {
+        display: inline;
+    }
+
+    &-inline-block {
+        display: inline-block;
+    }
+
+    &-block {
+        display: block;
+    }
+
+    &-none {
+        display: none;
+    }
+}
+
+.flex {
+    &-row {
+        flex-direction: row;
+    }
+
+    &-column {
+        flex-direction: column;
+    }
+
+    &-row-reverse {
+        flex-direction: row-reverse;
+    }
+
+    &-column-reverse {
+        flex-direction: column-reverse;
+    }
+
+    &-wrap {
+        flex-wrap: wrap;
+    }
+
+    &-nowrap {
+        flex-wrap: nowrap;
+    }
+
+    &-wrap-reverse {
+        flex-wrap: wrap-reverse;
+    }
+
+    &-grow {
+        flex-grow: 1;
+    }
+
+    &-shrink {
+        flex-shrink: 1;
+    }
+
+    &-basis {
+        flex-basis: 0;
+    }
+
+    &-auto {
+        flex: 1 1 auto;
+    }
+
+    &-none {
+        flex: 0 0 auto;
+    }
+
+    &-align-start {
+        align-items: flex-start;
+    }
+
+    &-align-end {
+        align-items: flex-end;
+    }
+
+    &-align-center {
+        align-items: center;
+    }
+
+    &-align-baseline {
+        align-items: baseline;
+    }
+
+    &-align-stretch {
+        align-items: stretch;
+    }
+
+    &-justify-start {
+        justify-content: flex-start;
+    }
+
+    &-justify-end {
+        justify-content: flex-end;
+    }
+
+    &-justify-center {
+        justify-content: center;
+    }
+
+    &-justify-between {
+        justify-content: space-between;
+    }
+
+    &-justify-around {
+        justify-content: space-around;
+    }
+
+    &-justify-evenly {
+        justify-content: space-evenly;
+    }
+
+    &-align-self-start {
+        align-self: flex-start;
+    }
+
+    &-align-self-end {
+        align-self: flex-end;
+    }
+
+    &-align-self-center {
+        align-self: center;
+    }
+
+    &-align-self-baseline {
+        align-self: baseline;
+    }
+
+    &-align-self-stretch {
+        align-self: stretch;
+    }
+}
+
+.gap {
+    &-64 {
+        gap: 64px;
+    }
+
+    &-48 {
+        gap: 48px;
+    }
+
+    &-32 {
+        gap: 32px;
+    }
+
+    &-24 {
+        gap: 24px;
+    }
+
+    &-16 {
+        gap: 16px;
+    }
+
+    &-8 {
+        gap: 8px;
+    }
+
+    &-4 {
+        gap: 4px;
+    }
+}
+
+.icon-left {
+    rotate: 180deg;
+}

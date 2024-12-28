@@ -16,4 +16,5 @@ import 'JBComponent/PageReader';
 // modules
 
 import 'JBModule/Hero';
+import 'JBModule/FeaturedOffer';
 

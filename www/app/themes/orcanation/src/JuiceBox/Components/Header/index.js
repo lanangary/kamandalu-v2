@@ -45,25 +45,25 @@ jQuery($ => {
         window.scrollAnchorTo(hash, $speed);
     });
 
-    let mainHeader = document.querySelector('#main-header');
+    // let mainHeader = document.querySelector('#main-header');
 
-    // add scroll class to header when scrolling up and remove when scrolling down and at top add top class
-    let lastScroll = 0;
-    window.addEventListener('scroll', () => {
-        let currentScroll = window.scrollY;
+    // // add scroll class to header when scrolling up and remove when scrolling down and at top add top class
+    // let lastScroll = 0;
+    // window.addEventListener('scroll', () => {
+    //     let currentScroll = window.scrollY;
 
-        if (currentScroll > lastScroll) {
-            mainHeader.classList.add('scroll');
-        } else {
-            mainHeader.classList.remove('scroll');
-        }
+    //     if (currentScroll > lastScroll) {
+    //         mainHeader.classList.add('scroll');
+    //     } else {
+    //         mainHeader.classList.remove('scroll');
+    //     }
 
-        if (currentScroll === 0) {
-            mainHeader.classList.add('top');
-        }
+    //     if (currentScroll === 0) {
+    //         mainHeader.classList.add('top');
+    //     }
 
-        lastScroll = currentScroll;
-    });
+    //     lastScroll = currentScroll;
+    // });
 
     
 });

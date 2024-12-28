@@ -37,17 +37,30 @@
     align-items: center;
     padding: 8px 16px;
     width: 100%;
+    font-family: 'MrEavesModOT', sans-serif;
+    font-size: 24px;
 
     &-transparent {
         border: solid 1px white;
         background-color: transparent;
-
         color: white;
+
+        &-black {
+            border: solid 1px white;
+            border-color: black;
+            color: black;
+        }
     }
 
     &-white {
         background-color: white;
         color: black;
+        border: solid 1px transparent;
+    }
+
+    &-gold {
+        background-color: $gold;
+        color: white;
         border: solid 1px transparent;
     }
 

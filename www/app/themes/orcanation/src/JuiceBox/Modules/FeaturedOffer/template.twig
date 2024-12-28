@@ -1,0 +1,95 @@
+<div class="module padding-fluid featured-offer image-{{module.image_position}}">
+	<div class="featured-offer-wrap">
+		<div class="featured-offer-wrap-content">
+			<div class="featured-offer-wrap-content-subtitle display-flex flex-justify-center eaves t-32 lh-100 color-white">
+				{{module.subtitle}}
+			</div>
+			<div class="featured-offer-wrap-content-swiper">
+				{% for item in module.featured_item %}
+					<div class="featured-offer-wrap-content-swiper-item {{loop.first ? 'active' : ''}}" data-index="{{loop.index}}">
+						<div class="featured-offer-wrap-content-swiper-feature-devide">
+							<div class="featured-offer-wrap-content-swiper-title plantin t-48 lh-110 color-grey">
+								{{item.title}}
+							</div>
+							<div class="featured-offer-wrap-content-swiper-excerpt eaves t-20 lh-100 color-grey">
+								{{item.post_excerpt}}
+							</div>
+							<div class="featured-offer-wrap-content-swiper-feature display-flex flex-justify-start flex-align-center">
+								<div class="featured-offer-wrap-content-swiper-feature-section display-flex flex-justify-center flex-align-center">
+									<div class="featured-offer-wrap-content-swiper-feature-icon">
+										{% include 'img/bed-icon.twig' with{
+                                'class': 'icon-black'
+                                } %}
+									</div>
+									<div class="featured-offer-wrap-content-swiper-feature-text">
+										{{item.meta('bed')}}
+									</div>
+								</div>
+								<div class="featured-offer-wrap-content-swiper-feature-section display-flex flex-justify-center flex-align-center">
+									<div class="featured-offer-wrap-content-swiper-feature-icon">
+										{% include 'img/guest-icon.twig' with{
+                                'class': 'icon-black'
+                                } %}
+									</div>
+									<div class="featured-offer-wrap-content-swiper-feature-text">
+										{{item.meta('guest')}}
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="featured-offer-wrap-content-swiper-feature-devide">
+							<div class="featured-offer-wrap-content-swiper-feature-button display-flex flex-justify-center gap-32">
+								{% if item.meta('booking_link') %}
+									{% include 'partials/button.twig' with {
+										'link': item.meta('booking_link'),
+										'style': 'mbtn mbtn-gold'
+									} %}
+								{% endif %}
+
+								{% include 'partials/button.twig' with {
+									'link': {
+										'url': item.link,
+										'title': 'View Details'
+									},
+									'style': 'mbtn mbtn-transparent-black'
+								} %}
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+				<div class="featured-offer-wrap-content-swiper-navigation display-flex flex-justify-start gap-48">
+					<div class="featured-offer-wrap-content-swiper-navigation-prev touch">
+						{% include 'img/circle-chevron.twig' with{
+                        'class': 'icon-black icon-left'
+                        } %}
+					</div>
+					<div class="featured-offer-wrap-content-swiper-navigation-next touch">
+						{% include 'img/circle-chevron.twig' with{
+                        'class': 'icon-black'
+                        } %}
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="featured-offer-wrap-image">
+			<div class="swiper-featured-offer">
+				<div class="swiper-wrapper">
+					{% for item in module.featured_item %}
+						<div class="swiper-slide">
+							<div class="featured-offer-wrap-image-item {{loop.first ? 'active' : ''}}">
+								{% include 'partials/image.twig' with{
+								'image': item.thumbnail,
+								} %}
+							</div>
+						</div>
+					{% endfor %}
+
+				</div>
+
+			</div>
+
+
+		</div>
+	</div>
+</div>

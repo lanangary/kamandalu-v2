@@ -85,6 +85,10 @@ button {
     pointer-events: none;
 }
 
+.swiper-button-disabled {
+    opacity: 0.5;
+}
+
 .module,
 .header {
     .container {
@@ -113,6 +117,10 @@ p {
 
 .eaves {
     font-family: 'MrEavesModOT', sans-serif;
+}
+
+.touch {
+    cursor: pointer;
 }
 
 .t {
@@ -202,6 +210,14 @@ p {
         font-size: 10px;
     }
 
+    &-12 {
+        font-size: 12px;
+    }
+
+    &-14 {
+        font-size: 14px;
+    }
+
     &-20 {
         font-size: 20px;
     }
@@ -212,5 +228,13 @@ p {
 
     &-32 {
         font-size: 32px;
+    }
+
+    &-40 {
+        font-size: 40px;
+    }
+
+    &-48 {
+        font-size: 48px;
     }
 }
