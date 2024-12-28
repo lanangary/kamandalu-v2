@@ -93,6 +93,7 @@ button {
 .header {
     .container {
         padding: 56px 96px;
+        max-width: 1440px;
 
         &-header {
             padding: 24px 45px;
@@ -236,5 +237,15 @@ p {
 
     &-48 {
         font-size: 48px;
+    }
+
+    &-72 {
+        font-size: 72px;
+    }
+}
+
+.t {
+    &-italic {
+        font-style: italic;
     }
 }

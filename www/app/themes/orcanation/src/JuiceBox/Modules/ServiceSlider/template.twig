@@ -1,0 +1,60 @@
+<div class="module padding-fluid service-slider">
+	<div class="container">
+		<div class="service-slider-wrap">
+
+			<div class="service-slider-heading">
+				<div class="service-slider-heading-content">
+					<div class="service-slider-heading-content-title plantin color-grey t-72 t-italic">
+						{{module.title}}
+					</div>
+					<div class="service-slider-heading-content-description eaves t-32 color-grey">
+						{{module.description}}
+					</div>
+				</div>
+				<div class="service-slider-heading-button">
+					{% include 'partials/button.twig' with{
+                    'link': module.button,
+                    'style': 'mbtn mbtn-transparent-black',
+                    } %}
+				</div>
+			</div>
+
+			<div class="swiper swiper-service">
+				<div class="swiper-wrapper">
+					{% for item in module.select_item %}
+						<div class="swiper-slide">
+							<div class="service-slider-item">
+								<div class="service-slider-item-image">
+									{% include 'partials/image.twig' with{
+								'image': item.thumbnail,
+								} %}
+								</div>
+								<div class="service-slider-item-title plantin t-32 color-grey t-italic">
+									{{item.title}}
+								</div>
+								<div class="service-slider-item-desc eaves t-20 color-grey">
+									{{item.post_excerpt}}
+								</div>
+								<div class="service-slider-item-button">
+									<a class="eaves t-20 color-grey" href="{{item.link}}">View Details</a>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="service-slider-navigation">
+				<div class="service-slider-navigation-prev touch">
+					{% include 'img/circle-chevron.twig' with{
+                        'class': 'icon-black icon-left'
+                        } %}
+				</div>
+				<div class="service-slider-navigation-next touch">
+					{% include 'img/circle-chevron.twig' with{
+                        'class': 'icon-black'
+                        } %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
