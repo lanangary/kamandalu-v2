@@ -32,8 +32,26 @@
     }
 
     &-item {
+        .style-bordered & {
+            overflow: hidden;
+            background: #e3e3e3;
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 32px;
+        }
+
         &-title {
             margin: 28px 0px;
+
+            .style-bordered & {
+                padding: 0px 24px;
+            }
+        }
+
+        &-desc {
+            .style-bordered & {
+                padding: 0px 24px;
+            }
         }
 
         &-image {
@@ -41,6 +59,10 @@
             height: 300px;
             overflow: hidden;
             aspect-ratio: 500/300;
+
+            .style-bordered & {
+                width: 100%;
+            }
 
             img {
                 width: 100%;
@@ -51,6 +73,9 @@
 
         &-button {
             margin-top: 32px;
+            .style-bordered & {
+                padding: 0px 24px;
+            }
         }
     }
 
