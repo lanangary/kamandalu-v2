@@ -18,7 +18,7 @@ class Module extends JBModule
 
         // Query for featured team members
         $argsfeatured = [
-            'post_type' => 'villas',
+            'post_type' => ['villas','culinary','spa'],
             'posts_per_page' => -1,
             'post__in' => $featured_id,
             'orderby' => 'post__in',

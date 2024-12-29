@@ -15,26 +15,31 @@
 								{{item.post_excerpt}}
 							</div>
 							<div class="featured-offer-wrap-content-swiper-feature display-flex flex-justify-start flex-align-center">
-								<div class="featured-offer-wrap-content-swiper-feature-section display-flex flex-justify-center flex-align-center">
-									<div class="featured-offer-wrap-content-swiper-feature-icon">
-										{% include 'img/bed-icon.twig' with{
-                                'class': 'icon-black'
-                                } %}
+								{% if item.meta('bed') %}
+									<div class="featured-offer-wrap-content-swiper-feature-section display-flex flex-justify-center flex-align-center">
+										<div class="featured-offer-wrap-content-swiper-feature-icon">
+											{% include 'img/bed-icon.twig' with{
+										'class': 'icon-black'
+										} %}
+										</div>
+										<div class="featured-offer-wrap-content-swiper-feature-text">
+											{{item.meta('bed')}}
+										</div>
 									</div>
-									<div class="featured-offer-wrap-content-swiper-feature-text">
-										{{item.meta('bed')}}
+								{% endif %}
+								{% if item.meta('guest') %}
+									<div class="featured-offer-wrap-content-swiper-feature-section display-flex flex-justify-center flex-align-center">
+										<div class="featured-offer-wrap-content-swiper-feature-icon">
+											{% include 'img/guest-icon.twig' with{
+										'class': 'icon-black'
+										} %}
+										</div>
+										<div class="featured-offer-wrap-content-swiper-feature-text">
+											{{item.meta('guest')}}
+										</div>
 									</div>
-								</div>
-								<div class="featured-offer-wrap-content-swiper-feature-section display-flex flex-justify-center flex-align-center">
-									<div class="featured-offer-wrap-content-swiper-feature-icon">
-										{% include 'img/guest-icon.twig' with{
-                                'class': 'icon-black'
-                                } %}
-									</div>
-									<div class="featured-offer-wrap-content-swiper-feature-text">
-										{{item.meta('guest')}}
-									</div>
-								</div>
+								{% endif %}
+
 							</div>
 						</div>
 						<div class="featured-offer-wrap-content-swiper-feature-devide">
