@@ -1,0 +1,52 @@
+.cta-devider {
+    height: 680px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 0;
+    }
+
+    &-image {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+
+    .cta-devider-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &-title {
+        margin-bottom: 24px;
+    }
+
+    &-desc {
+        margin-bottom: 64px;
+    }
+}
