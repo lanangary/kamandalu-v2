@@ -1,0 +1,30 @@
+.villa-listing {
+    &-wrap {
+        &-heading {
+            margin-bottom: 96px;
+        }
+    }
+
+    &-section {
+        display: flex;
+
+        &-image {
+            width: 100%;
+        }
+
+        &-content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            &-heading {
+                margin-bottom: 24px;
+            }
+
+            &-description {
+                margin-bottom: 24px;
+            }
+        }
+    }
+}

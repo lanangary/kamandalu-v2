@@ -4,6 +4,16 @@
     overflow: hidden;
     position: relative;
 
+    .container {
+        z-index: 2;
+        position: relative;
+        height: 100%;
+        justify-content: center;
+        align-items: flex-end;
+        display: flex;
+        pointer-events: none;
+    }
+
     &-bg {
         height: 90vh;
         width: 100%;

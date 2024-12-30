@@ -1,0 +1,65 @@
+<div class="module padding-fluid villa-listing">
+	<div class="container">
+		<div class="villa-listing-wrap">
+			<div class="villa-listing-wrap-heading plantin t-64 t-italic t-center color-grey">
+				{{module.title}}
+			</div>
+
+			{% for item in module.select_item %}
+				<div class="villa-listing-section">
+					<div class="villa-listing-section-image">
+						{% include 'VillaListing/swiper.twig' with {
+                            class: 'swiper-'~loop.index,
+                            arr: item.meta('featured_gallery')
+                        } %}
+					</div>
+					<div class="villa-listing-section-content">
+						<div class="villa-listing-section-content-title">
+							{{item.title}}
+						</div>
+						<div class="villa-listing-section-content-description">
+							{{item.post_excerpt}}
+						</div>
+
+						<div class="villa-listing-section-content-feature">
+
+							{% set icon = ['area','bed','guest'] %}
+							{% for feat in icon %}
+								{% set meta = feat == 'area' ? 'room_size' : feat  %}
+								<div class="villa-listing-section-content-feature-item">
+									<div class="villa-listing-section-content-feature-item-icon">
+										{% include 'img/villa-icon.twig' with {
+                                        value: feat
+                                    } %}
+									</div>
+									<div class="villa-listing-section-content-feature-item-text">
+										{{item.meta(meta)}}
+									</div>
+								</div>
+							{% endfor %}
+						</div>
+
+						<div class="villa-listing-section-content-button">
+							{% include 'partials/button.twig' with{
+                                'link': item.meta('booking_link'),
+                                'style': 'mbtn mbtn-gold',
+                            } %}
+							{% include 'partials/button.twig' with{
+                                'link': 
+                                    {
+                                        'url': item.link,
+                                        'title': 'DETAILS'
+                                    }
+                                ,
+                                'style': 'mbtn mbtn-transparent-black',
+                            } %}
+						</div>
+
+					</div>
+				</div>
+			{% endfor %}
+
+
+		</div>
+	</div>
+</div>

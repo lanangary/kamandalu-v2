@@ -212,3 +212,25 @@
         }
     }
 }
+
+.footer {
+    &-cta {
+        background-color: $gold;
+
+        &-section {
+            width: 100%;
+        }
+        &-wrap {
+            display: flex;
+            justify-content: space-between;
+            gap: 180px;
+        }
+    }
+
+    &-menu {
+        &-wrap {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}

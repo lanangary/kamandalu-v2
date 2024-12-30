@@ -1,13 +1,14 @@
 <div class="module padding-fluid service-slider style-{{module.style}}">
+	{% set textColor = module.style == 'bordered' ? 'color-black' : 'color-grey' %}
 	<div class="container">
 		<div class="service-slider-wrap">
 
 			<div class="service-slider-heading">
 				<div class="service-slider-heading-content">
-					<div class="service-slider-heading-content-title plantin color-grey t-72 t-italic">
+					<div class="service-slider-heading-content-title plantin {{textColor}} t-72 t-italic">
 						{{module.title}}
 					</div>
-					<div class="service-slider-heading-content-description eaves t-32 color-grey">
+					<div class="service-slider-heading-content-description eaves t-32 {{textColor}}">
 						{{module.description}}
 					</div>
 				</div>
@@ -29,14 +30,14 @@
 								'image': item.thumbnail,
 								} %}
 								</div>
-								<div class="service-slider-item-title plantin t-32 color-grey t-italic">
+								<div class="service-slider-item-title plantin t-32 {{textColor}} t-italic">
 									{{item.title}}
 								</div>
-								<div class="service-slider-item-desc eaves t-20 color-grey">
+								<div class="service-slider-item-desc eaves t-20 {{textColor}}">
 									{{item.post_excerpt}}
 								</div>
 								<div class="service-slider-item-button">
-									<span class="eaves t-20 color-grey">View Details</span>
+									<span class="eaves t-20 {{textColor}}">View Details</span>
 								</div>
 							</a>
 						</div>

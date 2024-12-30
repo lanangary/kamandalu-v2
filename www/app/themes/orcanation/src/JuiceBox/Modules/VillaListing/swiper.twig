@@ -1,0 +1,13 @@
+<div class="swiper {{class}}">
+	<div class="swiper-wrapper">
+		{% for item in arr %}
+			<div class="swiper-slide">
+				<div class="swiper-slide-image">
+					{% include 'partials/image.twig' with{
+                    'image': item.url,
+                    } %}
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+</div>
