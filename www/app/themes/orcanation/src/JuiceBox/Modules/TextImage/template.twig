@@ -1,0 +1,30 @@
+<div class="module padding-fluid text-image ">
+
+	<div class="text-image-wrap image-{{module.style}}">
+		<div class="text-image-section">
+			<div class="text-image-section-image">
+				{% include 'partials/image.twig' with {
+                    'image': module.image
+                } %}
+			</div>
+		</div>
+
+		<div class="text-image-section">
+			<div class="text-image-section-content">
+				<div class="text-image-section-content-title plantin t-40 color-grey t-italic">
+					{{module.title}}
+				</div>
+				<div class="text-image-section-content-description eaves t-24 color-grey">
+					{{module.description|wpautop}}
+				</div>
+				<div class="text-image-section-content-button">
+					{% include 'partials/button.twig' with {
+                        'link': module.button,
+                        'style': 'mbtn mbtn-gold'
+                    } %}
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
