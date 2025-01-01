@@ -1,0 +1,39 @@
+<div class="single custom-single-spa">
+	<div class="single-wrapper">
+		{% set images = [] %}
+		{% for item in post.meta('spa_gallery') %}
+			{# Insert the value into the images array with proper structure #}
+			{% set images = images | merge([{
+                image: {
+                    url: item.url,
+                    src: item.src,
+                    alt: item.alt
+                }
+            }]) %}
+		{% endfor %}
+
+		{% if post.meta('spa_gallery') is not empty %}
+			{% include 'Hero/template.twig' with {
+                module: {
+                    title: post.title,
+                    background: images
+                }
+            } %}
+		{% else %}
+			{% include 'Hero/template.twig' with {
+                module: {
+                    title: post.title,
+                    background: [
+                        {
+                            image: {
+                                "url": post.thumbnail.url,
+                                "src": post.thumbnail.src,
+                                "alt": post.thumbnail.title
+                            }
+                        }
+                    ]
+                }
+            } %}
+		{% endif %}
+	</div>
+</div>
