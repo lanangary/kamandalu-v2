@@ -311,6 +311,18 @@
     -webkit-backdrop-filter: blur(6px);
     border-radius: 10px;
 
+    &.scroll-up {
+        top: 0;
+    }
+
+    &.scroll-down {
+        top: -170px;
+    }
+
+    &.top {
+        top: 0 !important;
+    }
+
     .container {
         position: relative;
 
