@@ -1,26 +1,27 @@
-<div class="single custom-single-spa">
+<div class="single custom-single-spa module">
 	<div class="single-wrapper">
-		{% set images = [] %}
-		{% for item in post.meta('spa_gallery') %}
-			{# Insert the value into the images array with proper structure #}
-			{% set images = images | merge([{
+		<div class="single-wrapper-section">
+			{% set images = [] %}
+			{% for item in post.meta('spa_gallery') %}
+				{# Insert the value into the images array with proper structure #}
+				{% set images = images | merge([{
                 image: {
                     url: item.url,
                     src: item.src,
                     alt: item.alt
                 }
             }]) %}
-		{% endfor %}
+			{% endfor %}
 
-		{% if post.meta('spa_gallery') is not empty %}
-			{% include 'Hero/template.twig' with {
+			{% if post.meta('spa_gallery') is not empty %}
+				{% include 'Hero/template.twig' with {
                 module: {
                     title: post.title,
                     background: images
                 }
             } %}
-		{% else %}
-			{% include 'Hero/template.twig' with {
+			{% else %}
+				{% include 'Hero/template.twig' with {
                 module: {
                     title: post.title,
                     background: [
@@ -34,6 +35,60 @@
                     ]
                 }
             } %}
-		{% endif %}
+			{% endif %}
+		</div>
+		<div class="single-wrapper-section">
+			<div class="container">
+				<div class="custom-single-spa-content">
+					<div class="custom-single-spa-content-item">
+						<div class="custom-single-spa-content-item-def">
+							<div class="custom-single-spa-content-item-def-value">
+								<span class="custom-single-spa-content-item-def-value-title plantin t-italic color-grey t-22">
+									Time
+								</span>
+								<div class="custom-single-spa-content-item-def-value-content eaves t-20 color-grey">
+									{{post.meta('time')}}
+								</div>
+							</div>
+						</div>
+						<div class="custom-single-spa-content-item-def">
+							<div class="custom-single-spa-content-item-def-value">
+								<span class="custom-single-spa-content-item-def-value-title plantin t-italic color-grey t-22">
+									Includes
+								</span>
+								<div class="custom-single-spa-content-item-def-value-content eaves t-20 color-grey">
+									{{post.meta('include')|wpautop}}
+								</div>
+							</div>
+						</div>
+						<div class="custom-single-spa-content-item-def">
+							<div class="custom-single-spa-content-item-def-value">
+								<span class="custom-single-spa-content-item-def-value-title plantin t-italic color-grey t-22">
+									Reservation
+								</span>
+								<div class="custom-single-spa-content-item-def-value-content eaves t-22 color-grey">
+									{{options.options_spa.reservation_content|wpautop}}
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="custom-single-spa-content-item">
+						<div class="custom-single-spa-content-item-intro plantin color-grey t-40 t-italic lh-110">
+							{{post.meta('introduction')|wpautop}}
+						</div>
+						<div class="custom-single-spa-content-item-button">
+							{% include 'partials/button.twig' with{
+							link: post.meta('booking_link'),	
+							style: 'mbtn mbtn-transparent-black'
+						} %}
+							{% include 'partials/button.twig' with{
+							link: post.meta('booking_link'),	
+							style: 'mbtn mbtn-gold'
+						} %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
