@@ -1,0 +1,36 @@
+{% set term = [] %}
+
+{% for cat in card.terms %}
+	{% set term = term|merge([cat.slug]) %}
+{% endfor %}
+
+{% set term = term|join(',') %}
+
+<a href="{{card.link}}" class="filter-card" data-slug="{{term}}">
+	<div class="filter-card-wrap">
+		<div class="filter-card-image">
+			{% include 'partials/image.twig' with{
+                image: card.thumbnail,
+                alt: card.title
+            } %}
+		</div>
+		<div class="filter-card-cat">
+			<div class="filter-card-cat-wrap eaves t-20 color-grey">
+				{% for cat in card.terms %}
+					<div class="filter-card-cat-item ">
+						{{cat.name}}
+					</div>
+
+					{% if not loop.last %}
+						<div class="filter-card-cat-separator">
+							/
+						</div>
+					{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+		<div class="filter-card-title plantin t-40 color-grey t-italic lh-110">
+			{{card.title}}
+		</div>
+	</div>
+</a>

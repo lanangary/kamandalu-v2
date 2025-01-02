@@ -1,0 +1,74 @@
+.dining-and-offer {
+    &-heading {
+        &-title {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 64px;
+
+            h2 {
+                width: 70%;
+            }
+        }
+
+        &-filter {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 68px;
+            &-wrap {
+                width: 50%;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                justify-content: center;
+            }
+
+            button {
+                &.active {
+                    color: white;
+                    background-color: #404040;
+                }
+                border: 1px solid #404040;
+                padding: 8px 16px;
+                border-radius: 40px;
+                background-color: transparent;
+                color: #404040;
+            }
+        }
+    }
+
+    &-content {
+        &-wrap {
+            gap: 18px;
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 80px;
+        }
+    }
+
+    .filter-card {
+        width: calc(33% - 8px);
+
+        &-image {
+            height: 265px;
+            overflow: hidden;
+            aspect-ratio: 3 / 2;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &-cat {
+            &-wrap {
+                display: flex;
+                gap: 8px;
+                flex-wrap: wrap;
+                align-items: center;
+                margin: 24px 0px;
+            }
+        }
+    }
+}

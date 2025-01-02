@@ -118,6 +118,88 @@
                     "max": ""
                 },
                 {
+                    "key": "layout_677697f0506f4",
+                    "name": "dining_and_offer",
+                    "label": "Dining and Offer",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_67769849506f6",
+                            "label": "Title",
+                            "name": "title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "relevanssi_exclude": 0,
+                            "default_value": "",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_67769850506f7",
+                            "label": "Description",
+                            "name": "description",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "relevanssi_exclude": 0,
+                            "default_value": "",
+                            "allow_in_bindings": 0,
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_67769872506f8",
+                            "label": "Post Type",
+                            "name": "post_type",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "relevanssi_exclude": 0,
+                            "choices": {
+                                "culinary": "Culinary",
+                                "offer": "Offers"
+                            },
+                            "default_value": "culinary",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "allow_in_bindings": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
                     "key": "layout_676f62e9fc3e9",
                     "name": "featured_offer",
                     "label": "Featured Offer",
@@ -780,5 +862,5 @@
     "description": "",
     "show_in_rest": 0,
     "private": true,
-    "modified": 1735666954
+    "modified": 1735825653
 }

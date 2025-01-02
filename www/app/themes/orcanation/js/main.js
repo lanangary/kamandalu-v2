@@ -19,4 +19,5 @@ import 'JBModule/Hero';
 import 'JBModule/FeaturedOffer';
 import 'JBModule/ServiceSlider';
 import 'JBModule/VillaListing';
+import 'JBModule/DiningAndOffer';
 
