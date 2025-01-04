@@ -8,7 +8,9 @@ class Module extends JBModule
 {
     public function processModule()
     {
-        $module_featured = $this->module['villa'];
+        $post_type = $this->module['post_type'];
+
+        $module_featured = $post_type == 'villa' ? $this->module['villa'] : $this->module['offer'];
 
         // Extract IDs using array_map
         $featured_id = array_map(function($featured) {
@@ -17,7 +19,7 @@ class Module extends JBModule
 
         // Query for featured team members
         $argsfeatured = [
-            'post_type' => ['villas'],
+            'post_type' => $post_type,
             'posts_per_page' => -1,
             'post__in' => $featured_id,
             'orderby' => 'post__in',

@@ -1,28 +1,47 @@
-<div class="module padding-fluid hero">
-	<div class="hero-bg">
-		<div class="swiper">
-			<div class="swiper-wrapper">
-				{% for item in module.background %}
-					<div class="swiper-slide">
-						{% include 'partials/image.twig' with {
+{% if module.style == 'default' %}
+
+	<div class="module padding-fluid hero">
+		<div class="hero-bg">
+			<div class="swiper">
+				<div class="swiper-wrapper">
+					{% for item in module.background %}
+						<div class="swiper-slide">
+							{% include 'partials/image.twig' with {
 						'image': item.image,
 						'classes': 'hero-bg-image',
 						'lazy': true
 					} %}
-					</div>
-				{% endfor %}
-			</div>
-			<!-- If we need pagination -->
-			<div class="swiper-pagination"></div>
+						</div>
+					{% endfor %}
+				</div>
+				<!-- If we need pagination -->
+				<div class="swiper-pagination"></div>
 
-			<!-- If we need navigation buttons -->
-			<div class="swiper-button-prev"></div>
-			<div class="swiper-button-next"></div>
+				<!-- If we need navigation buttons -->
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="hero-wrap">
+				<h1 class="hero-title plantin t-72 lh-120 color-white t-italic">{{module.title}}</h1>
+			</div>
 		</div>
 	</div>
-	<div class="container">
-		<div class="hero-wrap">
-			<h1 class="hero-title plantin t-72 lh-120 color-white t-italic">{{module.title}}</h1>
+{% else %}
+
+	<div class="module hero hero-text-only">
+		<div class="container">
+			<div class="hero-text-only-wrap">
+				<h1 class="hero-text-only-title plantin t-72 lh-120 color-black t-italic t-center">
+					{{module.title|wpautop}}
+				</h1>
+				<div class="hero-text-only-desc plantin t-24 color-black lh-120 t-center t-italic">
+					{{module.description|wpautop}}
+				</div>
+			</div>
+
 		</div>
 	</div>
-</div>
+
+{% endif %}

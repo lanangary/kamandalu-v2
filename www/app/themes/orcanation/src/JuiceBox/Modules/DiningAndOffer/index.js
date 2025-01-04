@@ -9,9 +9,14 @@ class DiningAndOffer {
         }
 
         this.setFilter();
+        this.popupExperience();
     }
 
     setFilter() {
+        if (!document.querySelector('.dining-and-offer-heading-filter-button')) {
+            return;
+        }
+
         this.modules.forEach(module => {
             let filters = module.querySelectorAll(
                 '.dining-and-offer-heading-filter-button'
@@ -41,6 +46,53 @@ class DiningAndOffer {
                             card.style.display = 'none';
                         }
                     });
+                });
+            });
+        });
+    }
+
+    popupExperience() {
+        if (!document.querySelector('.experience-data')) {
+            return;
+        }
+
+        const popup = document.querySelector('.experience-popup');
+
+        this.modules.forEach(module => {
+            let buttons = module.querySelectorAll('.filter-card-button-details-toggle');
+            let datawrap = module.querySelector('.experience-data');
+            let dataList = datawrap.querySelectorAll('.experience-data-content');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    let id = button.getAttribute('data-id');
+                    let data = datawrap.querySelector(`[data-id="${id}"]`);
+
+                    // get the innerHTML of the data and put it in the popup .experience-popup-section-content-desc
+                    let image = data.querySelector('.experience-data-content-image')
+                        .innerHTML;
+                    let title = data.querySelector('.experience-data-content-title')
+                        .innerHTML;
+                    let desc = data.querySelector('.experience-data-content-desc')
+                        .innerHTML;
+                    let buttonlink = data.querySelector(
+                        '.experience-data-content-button'
+                    );
+
+                    popup.querySelector(
+                        '.experience-popup-section-image'
+                    ).innerHTML = image;
+                    popup.querySelector(
+                        '.experience-popup-section-content-title'
+                    ).innerHTML = title;
+                    popup.querySelector(
+                        '.experience-popup-section-content-desc'
+                    ).innerHTML = desc;
+                    popup.querySelector(
+                        '.experience-popup-section-content-button'
+                    ).innerHTML = buttonlink.innerHTML;
+
+                    popup.classList.add('active');
                 });
             });
         });

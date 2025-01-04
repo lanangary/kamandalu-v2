@@ -80,3 +80,28 @@
     &-wrap {
     }
 }
+
+.hero-text-only {
+    background-color: transparent;
+    height: auto;
+
+    &-title {
+        margin-bottom: 48px;
+    }
+
+    &-desc {
+        width: 80%;
+    }
+
+    &-wrap {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        align-items: flex-start;
+        padding-top: 166px;
+    }
+}

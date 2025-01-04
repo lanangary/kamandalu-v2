@@ -1,9 +1,12 @@
 <div class="module padding-fluid villa-listing">
 	<div class="container">
 		<div class="villa-listing-wrap">
-			<div class="villa-listing-wrap-heading plantin t-64 t-italic t-center color-grey">
-				{{module.title}}
-			</div>
+			{% if module.title %}
+				<div class="villa-listing-wrap-heading plantin t-64 t-italic t-center color-grey">
+					{{module.title}}
+				</div>
+			{% endif %}
+
 
 			{% for item in module.select_item %}
 				<div class="villa-listing-section">

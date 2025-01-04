@@ -1,0 +1,38 @@
+<div class="module padding-fluid dining-and-offer">
+	<div class="container">
+		<div class="dining-and-offer-wrap">
+			<div class="dining-and-offer-heading">
+				<div class="dining-and-offer-heading-title ">
+					<h2 class="t-center plantin t-72 color-grey t-italic lh-110">
+						{{module.title}}
+					</h2>
+				</div>
+				<div class="dining-and-offer-heading-desc">
+					{{module.description}}
+				</div>
+				<div class="dining-and-offer-heading-filter">
+					<div class="dining-and-offer-heading-filter-wrap">
+						<button class="dining-and-offer-heading-filter-button eaves t-18 lh-100 t-uppercase active" data-filter="all">
+							All
+						</button>
+						{% for item in module.filter %}
+							<button class="dining-and-offer-heading-filter-button eaves t-18 lh-100 t-uppercase" data-filter="{{item.slug}}">
+								{{item.name}}
+							</button>
+						{% endfor %}
+					</div>
+				</div>
+
+			</div>
+			<div class="dining-and-offer-content">
+				<div class="dining-and-offer-content-wrap">
+					{% for item in module.archive %}
+						{% include "DIningAndOffer/card.twig" with {
+                            card : item
+                        } %}
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

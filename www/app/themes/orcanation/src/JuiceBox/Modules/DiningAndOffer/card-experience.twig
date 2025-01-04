@@ -1,0 +1,29 @@
+<div class="filter-card">
+	<div class="filter-card-wrap">
+		<div class="filter-card-image">
+			{% include 'partials/image.twig' with{
+                image: card.thumbnail,
+                alt: card.title
+            } %}
+		</div>
+		<div class="filter-card-title plantin t-40 color-grey t-italic lh-110">
+			{{card.title}}
+		</div>
+
+		<div class="filter-card-button">
+			<div class="filter-card-button-wrap">
+				<div class="filter-card-button-book">
+					<a class="eaves t-18 color-gold" href="{{card.link}}">Book Now</a>
+				</div>
+				<div class="filter-card-button-devider">
+					/
+				</div>
+				<div class="filter-card-button-details">
+					<button class="filter-card-button-details-toggle eaves t-18 color-black" data-id="{{id}}">
+						Details
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

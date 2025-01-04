@@ -71,4 +71,65 @@
             }
         }
     }
+
+    &.style-experience {
+        .filter-card {
+            &-title {
+                margin-top: 24px;
+                margin-bottom: 36px;
+            }
+            &-button {
+                &-wrap {
+                    display: flex;
+                    gap: 8px;
+                    align-items: end;
+                    margin-top: 36px;
+                }
+
+                &-details {
+                    &-toggle {
+                        background: transparent;
+                        display: flex;
+                        border: none;
+                        position: relative;
+                        top: 2px;
+                    }
+                }
+            }
+        }
+
+        .experience-popup {
+            &-wrap {
+                display: flex;
+                padding: 75px;
+                gap: 68px;
+            }
+
+            &-section {
+                width: 100%;
+
+                &-image {
+                    aspect-ratio: 1.1;
+                    width: 100%;
+                }
+
+                &-content {
+                    &-title {
+                        margin-bottom: 32px;
+                    }
+
+                    &-desc {
+                        max-height: 400px;
+                        overflow: auto;
+                    }
+
+                    &-button {
+                        margin-top: 32px;
+                        width: auto;
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
 }

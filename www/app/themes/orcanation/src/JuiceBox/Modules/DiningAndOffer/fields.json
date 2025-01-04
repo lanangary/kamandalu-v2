@@ -1,7 +1,7 @@
 {
     "key": "layout_677697f0506f4",
     "name": "dining_and_offer",
-    "label": "Dining and Offer",
+    "label": "Dining and experience",
     "display": "block",
     "sub_fields": [
         {
@@ -65,7 +65,7 @@
             "relevanssi_exclude": 0,
             "choices": {
                 "culinary": "Culinary",
-                "offer": "Offers"
+                "experience": "Experience"
             },
             "default_value": "culinary",
             "return_format": "value",

@@ -1,0 +1,78 @@
+<div class="module padding-fluid dining-and-offer style-experience">
+	<div class="container">
+		<div class="dining-and-offer-wrap">
+			<div class="dining-and-offer-heading">
+				<div class="dining-and-offer-heading-title ">
+					<h2 class="t-center plantin t-72 color-grey t-italic lh-110">
+						{{module.title}}
+					</h2>
+				</div>
+				<div class="dining-and-offer-heading-desc">
+					{{module.description}}
+				</div>
+
+			</div>
+			<div class="dining-and-offer-content">
+				<div class="dining-and-offer-content-wrap">
+					{% for item in module.archive %}
+						{% include "DIningAndOffer/card-experience.twig" with {
+                            card : item,
+							id : loop.index
+                        } %}
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="experience-popup">
+		<div class="experience-popup-wrap">
+			<div class="experience-popup-section">
+
+				<div class="experience-popup-section-image">
+					<img class="experience-popup-section-image-value" src="#" alt="alt Image">
+				</div>
+			</div>
+
+			<div class="experience-popup-section">
+				<div class="experience-popup-section-content">
+					<div class="experience-popup-section-content-title plantin t-40 lh-110 color-grey">Content Title</div>
+					<div class="experience-popup-section-content-desc eaves t-20 lh-100 color-grey">
+						Content Description
+					</div>
+					<div class="experience-popup-section-content-button">
+						<a class="mbtn mbtn-gold" href="#">Book Now</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="experience-data none">
+		{% for item in module.archive %}
+			<div class="experience-data-content" data-id="{{loop.index}}">
+				<div class="experience-data-content-title">
+					{{item.post_title}}
+				</div>
+				<div class="experience-data-content-desc">
+					{{item.post_content|wpautop}}
+				</div>
+
+				<div class="experience-data-content-image">
+					{% include 'partials/image.twig' with{
+						image: item.thumbnail,
+						alt: item.post_title
+					} %}
+				</div>
+
+				<div class="experience-data-content-button">
+					{% include 'partials/button.twig' with{
+						'link': item.meta('booking_link'),
+						'style': 'mbtn mbtn-gold',
+						} %}
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+</div>

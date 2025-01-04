@@ -16,6 +16,7 @@ class offers extends CustomPostType
     protected static $supports = array(
         'title',
         'thumbnail',
+        'editor',
         'excerpt',
         'revisions'
     );
