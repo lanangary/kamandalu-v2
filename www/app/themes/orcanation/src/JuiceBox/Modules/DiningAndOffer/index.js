@@ -57,6 +57,11 @@ class DiningAndOffer {
         }
 
         const popup = document.querySelector('.experience-popup');
+        let close = popup.querySelector('.experience-popup-close');
+
+        close.addEventListener('click', () => {
+            popup.classList.remove('active');
+        });
 
         this.modules.forEach(module => {
             let buttons = module.querySelectorAll('.filter-card-button-details-toggle');

@@ -99,10 +99,40 @@
         }
 
         .experience-popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: #ac9366d4;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            opacity: 0;
+            pointer-events: none;
+            transition: $transition-default;
+
+            &.active {
+                opacity: 1;
+                pointer-events: auto;
+                z-index: 99;
+            }
+
+            &-close {
+                position: absolute;
+                right: 45px;
+                top: 45px;
+                cursor: pointer;
+            }
             &-wrap {
                 display: flex;
                 padding: 75px;
                 gap: 68px;
+
+                position: relative;
+                background: white;
+                width: 80vw;
+                height: 85vh;
             }
 
             &-section {
@@ -119,7 +149,7 @@
                     }
 
                     &-desc {
-                        max-height: 400px;
+                        max-height: 350px;
                         overflow: auto;
                     }
 
