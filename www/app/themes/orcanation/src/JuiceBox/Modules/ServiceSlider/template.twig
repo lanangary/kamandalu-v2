@@ -4,20 +4,29 @@
 		<div class="service-slider-wrap">
 
 			<div class="service-slider-heading">
-				<div class="service-slider-heading-content">
-					<div class="service-slider-heading-content-title plantin {{textColor}} t-72 t-italic">
-						{{module.title}}
+				{% if module.title %}
+					<div class="service-slider-heading-content">
+						<div class="service-slider-heading-content-title plantin {{textColor}} t-72 t-italic">
+							{{module.title}}
+						</div>
+						<div class="service-slider-heading-content-description eaves t-32 {{textColor}}">
+							{{module.description}}
+						</div>
 					</div>
-					<div class="service-slider-heading-content-description eaves t-32 {{textColor}}">
-						{{module.description}}
-					</div>
-				</div>
-				<div class="service-slider-heading-button">
-					{% include 'partials/button.twig' with{
+
+				{% endif %}
+
+
+				{% if module.button %}
+					<div class="service-slider-heading-button">
+						{% include 'partials/button.twig' with{
                     'link': module.button,
                     'style': 'mbtn mbtn-transparent-black',
                     } %}
-				</div>
+					</div>
+				{% endif %}
+
+
 			</div>
 
 			<div class="swiper swiper-service">

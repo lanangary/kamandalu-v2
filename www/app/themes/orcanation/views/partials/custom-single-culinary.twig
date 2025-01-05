@@ -47,7 +47,6 @@
 						{{post.meta('introduction')|wpautop}}
 					</div>
 				</div>
-
 				<div class="custom-single-culinary-content-item">
 					<div class="custom-single-culinary-content-item-tab">
 						<div class="custom-single-culinary-content-item-tab-reservation">
@@ -105,8 +104,78 @@
 					</div>
 				</div>
 
+				<div class="custom-single-culinary-content-item tb-96">
+					<div class="custom-single-culinary-content-item-galery">
+						<div class="custom-single-culinary-content-item-galery-heading plantin t-40 t-center color-grey lh-110 t-italic">
+							SIGNATURE DISHES
+						</div>
+						<div class="custom-single-culinary-content-item-galery-content">
+							{% include 'GallerySlide/template.twig' with {
+							module: {
+									item: post.meta('gallery')
+								}
+							} %}
+						</div>
+					</div>
+				</div>
+
+				<div class="custom-single-culinary-content-item">
+					<div class="custom-single-culinary-content-item-tab">
+						<div class="custom-single-culinary-content-item-tab-reservation">
+							<div class="custom-single-culinary-content-item-tab-reservation-section">
+								<div class="custom-single-culinary-content-item-tab-reservation-section-title plantin t-32 color-white lh-100 t-italic">
+									Make Your Reservation
+								</div>
+							</div>
+
+							<div class="custom-single-culinary-content-item-tab-reservation-section">
+								<div class="custom-single-culinary-content-item-tab-reservation-section-action">
+									<div class="custom-single-culinary-content-item-tab-reservation-section-action-phone eaves t-20 color-white">
+										<a href="tel:+62361123456" target="_blank" rel="noopener noreferrer">+62 361 123 456</a>
+									</div>
+									<div class="custom-single-culinary-content-item-tab-reservation-section-action-button">
+										{% include "partials/button.twig" with{
+											'link': post.meta('booking_link'),
+											'style': 'mbtn mbtn-gold border-12 t-uppercase eaves t-20'
+										} %}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="custom-single-culinary-content-item">
+					<div class="custom-single-culinary-content-item-other">
+						{% include 'ServiceSlider/template.twig' with {
+							module:{
+								style: 'bordered',
+								select_item: related_post
+							}
+						} %}
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		{% if options.single_culinary.title %}
+			<div class="single-wrapper-section">
+				{% include "CtaDevider/template.twig" with {
+				module: {
+					title: options.single_culinary.title,
+					description: options.single_culinary.description,
+					button: options.single_culinary.button,
+					background: options.single_culinary.background
+				}
+			} %}
 			</div>
 
+		{% endif %}
+
+
+		<div class="single-wrapper-section">
+			{% include 'partials/modules.twig' %}
 		</div>
 	</div>
 </div>

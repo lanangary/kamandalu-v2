@@ -1143,6 +1143,13 @@
                 "operator": "==",
                 "value": "villas"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "culinary"
+            }
         ]
     ],
     "menu_order": 1,
@@ -1155,5 +1162,5 @@
     "description": "",
     "show_in_rest": 0,
     "private": true,
-    "modified": 1736070433
+    "modified": 1736076612
 }
