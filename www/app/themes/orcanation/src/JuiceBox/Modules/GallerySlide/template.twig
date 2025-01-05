@@ -1,0 +1,23 @@
+<div class="module padding-fluid croped-gallery">
+	<div class="container">
+		<div class="swiper">
+			<div class="swiper-wrapper">
+				{% for items in module.item %}
+					<div class="swiper-slide">
+						{% include 'partials/image.twig' with {
+						'image': items,
+						'classes': 'hero-bg-image',
+						'lazy': true
+					} %}
+					</div>
+				{% endfor %}
+			</div>
+			<!-- If we need pagination -->
+			<div class="swiper-pagination none"></div>
+
+			<!-- If we need navigation buttons -->
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+		</div>
+	</div>
+</div>

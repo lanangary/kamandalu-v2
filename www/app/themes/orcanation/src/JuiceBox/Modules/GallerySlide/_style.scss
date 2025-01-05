@@ -1,0 +1,42 @@
+.croped-gallery {
+    .swiper {
+        height: 100%;
+        width: 100%;
+        height: 480px;
+        &-wrapper {
+            height: 100%;
+        }
+
+        &-slide {
+            width: 75%;
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 16/9;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &-button {
+            &-prev,
+            &-next {
+                scale: 0.8;
+                color: white;
+            }
+        }
+
+        &-pagination {
+            bottom: 48px;
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            &-bullet {
+                background: white;
+                scale: 2;
+            }
+        }
+    }
+}
