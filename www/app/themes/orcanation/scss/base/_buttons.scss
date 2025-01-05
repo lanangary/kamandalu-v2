@@ -74,4 +74,10 @@
         background-color: black;
         color: white;
     }
+
+    &.border {
+        &-12 {
+            border-radius: 12px;
+        }
+    }
 }

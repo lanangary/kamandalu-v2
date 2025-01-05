@@ -1,0 +1,112 @@
+<div class="single custom-single-culinary module">
+	<div class="single-wrapper">
+		<div class="single-wrapper-section">
+			{% set images = [] %}
+			{% for item in post.meta('featured_gallery') %}
+				{# Insert the value into the images array with proper structure #}
+				{% set images = images | merge([{
+                image: {
+                    url: item.url,
+                    src: item.src,
+                    alt: item.alt
+                }
+            }]) %}
+			{% endfor %}
+
+			{% if post.meta('featured_gallery') is not empty %}
+				{% include 'Hero/template.twig' with {
+                module: {
+                    title: post.title,
+                    background: images,
+					style: 'default'
+                }
+            } %}
+			{% else %}
+				{% include 'Hero/template.twig' with {
+                module: {
+                    title: post.title,
+                    background: [
+                        {
+                            image: {
+                                "url": post.thumbnail.url,
+                                "src": post.thumbnail.src,
+                                "alt": post.thumbnail.title
+                            }
+                        }
+                    ]
+                }
+            } %}
+			{% endif %}
+		</div>
+		<div class="single-wrapper-section">
+
+			<div class="custom-single-culinary-content">
+
+				<div class="custom-single-culinary-content-item">
+					<div class="custom-single-culinary-content-item-intro plantin color-grey t-40 t-italic lh-110 t-center">
+						{{post.meta('introduction')|wpautop}}
+					</div>
+				</div>
+
+				<div class="custom-single-culinary-content-item">
+					<div class="custom-single-culinary-content-item-tab">
+						<div class="custom-single-culinary-content-item-tab-reservation">
+							<div class="custom-single-culinary-content-item-tab-reservation-section">
+								<div class="custom-single-culinary-content-item-tab-reservation-section-title plantin t-32 color-white lh-100 t-italic">
+									Make Your Reservation
+								</div>
+							</div>
+
+							<div class="custom-single-culinary-content-item-tab-reservation-section">
+								<div class="custom-single-culinary-content-item-tab-reservation-section-action">
+									<div class="custom-single-culinary-content-item-tab-reservation-section-action-phone eaves t-20 color-white">
+										<a href="tel:+62361123456" target="_blank" rel="noopener noreferrer">+62 361 123 456</a>
+									</div>
+									<div class="custom-single-culinary-content-item-tab-reservation-section-action-button">
+										{% include "partials/button.twig" with{
+											'link': post.meta('booking_link'),
+											'style': 'mbtn mbtn-gold border-12 t-uppercase eaves t-20'
+										} %}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="custom-single-culinary-content-item-tab bg-gold">
+						<div class="custom-single-culinary-content-item-tab-info">
+							<div class="custom-single-culinary-content-item-tab-info-section">
+
+								<div class="custom-single-culinary-content-item-tab-info-section-title plantin t-32 color-white lh-100 t-italic">
+									Open
+								</div>
+								<div class="custom-single-culinary-content-item-tab-info-section-title eaves t-20 color-white">
+									{{post.meta('time')}}
+								</div>
+							</div>
+
+							<div class="custom-single-culinary-content-item-tab-info-section">
+								<div class="custom-single-culinary-content-item-tab-info-section-title plantin t-32 color-white lh-100 t-italic">
+									Price
+								</div>
+								<div class="custom-single-culinary-content-item-tab-info-section-title eaves t-20 color-white">
+									{{post.meta('price')|wpautop}}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="custom-single-culinary-content-item tb-96">
+					<div class="custom-single-culinary-content-item-accordion">
+						{% include "Accordion/template.twig" with{
+							module: post.meta('accordion')
+						} %}
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+</div>

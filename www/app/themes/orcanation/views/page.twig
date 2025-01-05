@@ -12,6 +12,10 @@
 		{% include 'partials/custom-single-villas.twig' with {
             post: post
         } %}
+	{% elseif post.post_type == 'culinary' %}
+
+		{% include 'partials/custom-single-culinary.twig' %}
+
 	{% else %}
 		<section class="section section-main section-main--{{ post.post_type }} padding-fluid-default">
 			<div class="container">

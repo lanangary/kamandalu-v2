@@ -1,0 +1,54 @@
+.single-culinary {
+    .custom-single-culinary {
+        &-content {
+            .container {
+                padding: unset;
+            }
+            &-item {
+                margin: 48px 98px;
+
+                &.tb-96 {
+                    margin: 96px;
+                }
+
+                &-tab {
+                    background: #404040;
+                    padding: 24px 48px;
+                    border-radius: 12px;
+                    margin-top: 48px;
+                    &-reservation {
+                        display: flex;
+                        justify-content: space-between;
+                        width: 100%;
+                        align-items: center;
+
+                        &-section {
+                            &-action {
+                                display: flex;
+                                align-items: center;
+                                gap: 45px;
+                            }
+                        }
+                    }
+
+                    &-info {
+                        display: flex;
+                        justify-content: space-between;
+                        width: 100%;
+                        align-items: center;
+
+                        &-section {
+                            display: flex;
+                            align-items: center;
+                            gap: 45px;
+                        }
+                    }
+
+                    &.bg-gold {
+                        background: $gold;
+                    }
+                }
+            }
+        }
+    }
+}
