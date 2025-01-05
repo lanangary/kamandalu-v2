@@ -1097,6 +1097,13 @@
                 "operator": "==",
                 "value": "page"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "villas"
+            }
         ]
     ],
     "menu_order": 1,
@@ -1109,5 +1116,5 @@
     "description": "",
     "show_in_rest": 0,
     "private": true,
-    "modified": 1736056561
+    "modified": 1736060131
 }

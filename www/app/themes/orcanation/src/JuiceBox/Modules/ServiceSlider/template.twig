@@ -36,6 +36,25 @@
 								<div class="service-slider-item-desc eaves t-20 {{textColor}}">
 									{{item.post_excerpt}}
 								</div>
+
+								{% if item.post_type == 'villas' %}
+									<div class="service-slider-item-features">
+										{% set icon = ['area','bed','guest'] %}
+										{% for feat in icon %}
+											{% set meta = feat == 'area' ? 'room_size' : feat  %}
+											<div class="service-slider-item-features-item">
+												<div class="service-slider-item-features-item-icon">
+													{% include 'img/villa-icon.twig' with {
+														value: feat
+													} %}
+												</div>
+												<div class="service-slider-item-features-item-text eaves t-18 color-grey">
+													{{item.meta(meta)}}
+												</div>
+											</div>
+										{% endfor %}
+									</div>
+								{% endif %}
 								<div class="service-slider-item-button ">
 									<span class="eaves t-20 {{textColor}} ">View Details</span>
 								</div>

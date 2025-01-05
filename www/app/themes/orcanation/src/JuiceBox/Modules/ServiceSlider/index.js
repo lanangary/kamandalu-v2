@@ -17,9 +17,7 @@ class ServiceSlider {
     }
 
     slider() {
-   
         this.modules.forEach(module => {
-
             let newSwiper = module.querySelector('.swiper');
             const swiper = new Swiper(newSwiper, {
                 modules: [Navigation, Pagination, EffectFade, Controller],
@@ -33,12 +31,10 @@ class ServiceSlider {
                 centeredSlides: false,
                 roundLengths: true,
                 loopAdditionalSlides: 30,
-  
+                slidesOffsetAfter: 320
             });
-
         });
     }
-
 }
 
 const ServiceSliderInit = new ServiceSlider();

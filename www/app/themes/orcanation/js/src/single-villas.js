@@ -38,6 +38,7 @@ class singleVillas {
             roundLengths: true,
             loopAdditionalSlides: 30,
             initialSlide: 0,
+
             on: {
                 slideChange: function() {
                     setTimeout(() => {
