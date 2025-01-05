@@ -1,0 +1,35 @@
+{% set max = module.heading|length %}
+
+<div class="module padding-fluid info-table">
+	<div class="container">
+		<div class="info-table-wrap">
+			<div class="info-table-main">
+				<div class="info-table-main-content">
+					<div class="table-item"></div>
+					{% for item in module.heading %}
+						<div class="table-item">
+							{{item.title}}
+						</div>
+					{% endfor %}
+				</div>
+				{% for item in module.item %}
+					<div class="info-table-main-content">
+
+						<div class="table-item">
+							{{item.title}}
+						</div>
+
+						{% for value in item.content %}
+							{% if loop.index <= max %}
+								<div class="table-item">
+									{{value.value}}
+								</div>
+							{% endif %}
+						{% endfor %}
+
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>

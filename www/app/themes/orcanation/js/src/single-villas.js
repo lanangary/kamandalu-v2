@@ -15,7 +15,7 @@ class singleVillas {
             return;
         }
 
-        this.slider();
+        // this.slider();
     }
 
     slider() {

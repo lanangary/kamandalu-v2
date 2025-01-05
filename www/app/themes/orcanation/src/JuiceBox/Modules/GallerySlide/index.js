@@ -5,7 +5,7 @@ Swiper.use([Navigation, Pagination, EffectFade, Controller]);
 
 class GallerySlide {
     constructor() {
-        this.modules = document.querySelectorAll('.module.croped-gallery');
+        this.modules = document.querySelectorAll('.module.simple-galery');
     }
 
     init() {
@@ -27,7 +27,7 @@ class GallerySlide {
                 pagination: {
                     el: module.querySelector('.swiper-pagination'), // Pagination outside the swiper container
                     clickable: true,
-                    type: 'bullets'
+                    type: 'fraction'
                 },
                 navigation: {
                     prevEl: module.querySelector('.swiper-button-prev'), // Previous button outside the swiper container
@@ -37,7 +37,22 @@ class GallerySlide {
                 roundLengths: true,
                 loopAdditionalSlides: 30,
                 initialSlide: 1,
-                spaceBetween: 30
+                spaceBetween: 30,
+
+                on: {
+                    slideChange: function() {
+                        setTimeout(() => {
+                            console.log('onchange');
+                            let content = newSwiper.querySelectorAll(
+                                '.swiper-image-alt-item'
+                            );
+                            content.forEach(item => {
+                                item.classList.remove('active');
+                            });
+                            content[swiper.realIndex].classList.add('active');
+                        }, 200);
+                    }
+                }
             });
         });
     }

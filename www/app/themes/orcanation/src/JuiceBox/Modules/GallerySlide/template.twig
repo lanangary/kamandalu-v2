@@ -1,6 +1,6 @@
-<div class="module padding-fluid croped-gallery">
+<div class="module simple-galery padding-fluid {{module.style}}-gallery">
 	<div class="container">
-		<div class="swiper">
+		<div class="swiper {{module.style == 'full' ? 'layer-black' : ''}}">
 			<div class="swiper-wrapper">
 				{% for items in module.item %}
 					<div class="swiper-slide">
@@ -13,7 +13,24 @@
 				{% endfor %}
 			</div>
 			<!-- If we need pagination -->
-			<div class="swiper-pagination none"></div>
+
+			{% if module.style == 'full' %}
+				<!-- If we need pagination -->
+				<div class="swiper-navigation plantin t-32 t-italic color-white lh-100">
+					<div class="swiper-pagination"></div>
+					<div class="swiper-image-alt">
+						{% for item in module.item %}
+							<div class="swiper-image-alt-item {{loop.first ? 'active' : ''}}">
+								{{item.alt}}
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+
+			{% else %}
+				<div class="swiper-pagination none"></div>
+			{% endif %}
+
 
 			<!-- If we need navigation buttons -->
 			<div class="swiper-button-prev"></div>

@@ -1,0 +1,41 @@
+.info-table {
+    &-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &-main {
+        display: flex;
+        width: max-content;
+        max-width: 100%;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        flex-direction: column;
+
+        scrollbar-color: $gold white;
+        scrollbar-width: thin;
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+        }
+
+        &-content {
+            display: flex;
+            padding: 22px 0px;
+            border-bottom: solid 1px $grey;
+            width: max-content;
+
+            &:last-child {
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    .table-item {
+        width: 200px;
+        min-width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

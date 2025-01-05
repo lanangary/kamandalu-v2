@@ -120,34 +120,12 @@
 				<div class="custom-single-villas-content-item width-full">
 					<div class="custom-single-villas-content-item-gallery plantin t-32 color-black lh-100">
 						<div class="custom-single-villas-content-item-gallery-wrap">
-							<div class="swiper layer-black">
-								<div class="swiper-wrapper">
-									{% for item in post.meta('gallery') %}
-										<div class="swiper-slide">
-											{% include 'partials/image.twig' with {
-											'image': item,
-											'classes': 'hero-bg-image',
-											'lazy': true
-										} %}
-										</div>
-									{% endfor %}
-								</div>
-								<!-- If we need pagination -->
-								<div class="swiper-navigation plantin t-32 t-italic color-white lh-100">
-									<div class="swiper-pagination"></div>
-									<div class="swiper-image-alt">
-										{% for item in post.meta('gallery') %}
-											<div class="swiper-image-alt-item {{loop.first ? 'active' : ''}}">
-												{{item.alt}}
-											</div>
-										{% endfor %}
-									</div>
-								</div>
-
-								<!-- If we need navigation buttons -->
-								<div class="swiper-button-prev"></div>
-								<div class="swiper-button-next"></div>
-							</div>
+							{% include 'GallerySlide/template.twig' with {
+								module: {
+									item: post.meta('gallery'),
+									style: 'full'
+									}
+							} %}
 						</div>
 					</div>
 				</div>
