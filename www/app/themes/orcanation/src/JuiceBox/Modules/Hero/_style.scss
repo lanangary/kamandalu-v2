@@ -79,6 +79,15 @@
 
     &-wrap {
     }
+
+    &-button {
+        pointer-events: all;
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 48px;
+    }
 }
 
 .hero-text-only {

@@ -1,0 +1,106 @@
+<div class="single custom-single-villas module">
+	<div class="single-wrapper">
+		<div class="single-wrapper-section">
+			{% set images = [] %}
+			{% for item in post.meta('featured_gallery') %}
+				{# Insert the value into the images array with proper structure #}
+				{% set images = images | merge([{
+                image: {
+                    url: item.url,
+                    src: item.src,
+                    alt: item.alt
+                }
+            }]) %}
+			{% endfor %}
+
+
+			{% if post.meta('featured_gallery') is not empty %}
+				{% include 'Hero/template.twig' with {
+                module: {
+                    title: post.title,
+                    background: images,
+					style: 'single-villas',
+					button: post.meta('booking_link')
+                }
+            } %}
+			{% else %}
+				{% include 'Hero/template.twig' with {
+                module: {
+                    title: post.title,
+                    background: [
+                        {
+                            image: {
+                                "url": post.thumbnail.url,
+                                "src": post.thumbnail.src,
+                                "alt": post.thumbnail.title
+                            }
+                        }
+                    ]
+                }
+            } %}
+			{% endif %}
+		</div>
+		<div class="single-wrapper-section">
+			<div class="container">
+				<div class="custom-single-villas-content">
+					<div class="custom-single-villas-content-item">
+						<div class="custom-single-villas-content-item-intro eaves t-32 color-black lh-100 t-center">
+							{{post.meta('introduction')}}
+						</div>
+					</div>
+					<div class="custom-single-villas-content-item">
+						<div class="custom-single-villas-content-item-feature">
+							<div class="custom-single-villas-content-item-feature-item">
+								<div class="custom-single-villas-content-item-feature-item-icon">
+									{% include "img/villa-icon.twig" with{
+										value: 'bed'
+									} %}
+								</div>
+								<div class="custom-single-villas-content-item-feature-item-title">
+									{{post.meta('bed')}}
+								</div>
+							</div>
+							<div class="custom-single-villas-content-item-feature-item">
+								<div class="custom-single-villas-content-item-feature-item-icon">
+									{% include "img/villa-icon.twig" with{
+										value: 'area'
+									} %}
+								</div>
+								<div class="custom-single-villas-content-item-feature-item-title">
+									{{post.meta('room_size')}}
+								</div>
+							</div>
+							<div class="custom-single-villas-content-item-feature-item">
+								<div class="custom-single-villas-content-item-feature-item-icon">
+									{% include "img/villa-icon.twig" with{
+										value: 'guest'
+									} %}
+								</div>
+								<div class="custom-single-villas-content-item-feature-item-title">
+									{{post.meta('guest')}}
+								</div>
+							</div>
+
+							{% if post.meta('additional_feature') is not empty %}
+								{% for item in post.meta('additional_feature') %}
+									<div class="custom-single-villas-content-item-feature-item">
+										<div class="custom-single-villas-content-item-feature-item-icon">
+											{% include "partials/image.twig" with{
+												image: item.icon,
+											} %}
+										</div>
+										<div class="custom-single-villas-content-item-feature-item-title">
+											{{item.value}}
+										</div>
+									</div>
+								{% endfor %}
+							{% endif %}
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

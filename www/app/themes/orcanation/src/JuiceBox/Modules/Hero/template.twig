@@ -1,5 +1,4 @@
 {% if module.style == 'default' %}
-
 	<div class="module padding-fluid hero">
 		<div class="hero-bg">
 			<div class="swiper">
@@ -28,8 +27,42 @@
 			</div>
 		</div>
 	</div>
-{% else %}
+{% elseif module.style == 'single-villas' %}
+	<div class="module padding-fluid hero">
+		<div class="hero-bg">
+			<div class="swiper">
+				<div class="swiper-wrapper">
+					{% for item in module.background %}
+						<div class="swiper-slide">
+							{% include 'partials/image.twig' with {
+						'image': item.image,
+						'classes': 'hero-bg-image',
+						'lazy': true
+					} %}
+						</div>
+					{% endfor %}
+				</div>
+				<!-- If we need pagination -->
+				<div class="swiper-pagination"></div>
 
+				<!-- If we need navigation buttons -->
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="hero-wrap">
+				<h1 class="hero-title plantin t-72 lh-120 color-white t-italic">{{module.title}}</h1>
+				<div class="hero-button">
+					{% include "partials/button.twig" with{
+						'link': module.button,
+						style: 'mbtn mbtn-transparent'
+					} %}
+				</div>
+			</div>
+		</div>
+	</div>
+{% else %}
 	<div class="module hero hero-text-only">
 		<div class="container">
 			<div class="hero-text-only-wrap">

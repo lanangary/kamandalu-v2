@@ -8,6 +8,10 @@
             post: post
         } %}
 
+	{% elseif post.post_type == 'villas' %}
+		{% include 'partials/custom-single-villas.twig' with {
+            post: post
+        } %}
 	{% else %}
 		<section class="section section-main section-main--{{ post.post_type }} padding-fluid-default">
 			<div class="container">

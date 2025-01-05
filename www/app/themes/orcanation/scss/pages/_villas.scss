@@ -1,0 +1,30 @@
+.single-villas {
+    .custom-single-villas {
+        &-content {
+            &-item {
+                &-feature {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 12px;
+                    margin-top: 45px;
+                    margin-bottom: 70px;
+                    &-item {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 8px;
+
+                        &-icon {
+                            width: 34px;
+                            height: 34px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
