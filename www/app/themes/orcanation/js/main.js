@@ -7,6 +7,7 @@ import './plugins/scroll-to';
 import 'JBSrc/in-view';
 import 'JBSrc/gform-spinner';
 import 'JBSrc/gtm-events';
+import 'JBSrc/single-villas';
 //import 'JBSrc/page-transitions';
 
 import 'JBComponent/Header';
@@ -20,4 +21,4 @@ import 'JBModule/FeaturedOffer';
 import 'JBModule/ServiceSlider';
 import 'JBModule/VillaListing';
 import 'JBModule/DiningAndOffer';
-
+import 'JBModule/Accordion';

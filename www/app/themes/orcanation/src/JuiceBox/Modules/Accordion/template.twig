@@ -1,0 +1,27 @@
+<div class="module padding-fluid accordion bg-orange">
+	<div class="container tb-96">
+		<div class="accordion-wrap">
+			<div class="accordion-heading">
+				<h2 class="accordion-heading-title plantin t-48 t-italic color-grey">
+					{{ module.title }}
+				</h2>
+			</div>
+
+			<div class="accordion-accordion-wrap">
+				<div class="accordion-accordion">
+					{% for item in module.accordion_item %}
+						<button class="accordion" data-index="{{ loop.index }}">
+							<span class="plantin t-italic t-24 color-grey">{{ item.title }}</span>
+							<span class="accordion-icon">
+								{% include "img/close-icon.twig" %}
+							</span>
+						</button>
+						<div class="panel eaves t-18 color-grey">
+							{{ item.content|wpautop }}
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

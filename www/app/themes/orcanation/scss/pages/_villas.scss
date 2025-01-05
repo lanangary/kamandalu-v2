@@ -1,7 +1,15 @@
 .single-villas {
     .custom-single-villas {
         &-content {
+            .container {
+                padding: unset;
+            }
             &-item {
+                margin: 48px 96px;
+
+                &.width-full {
+                    margin: 48px 0px;
+                }
                 &-feature {
                     display: flex;
                     justify-content: center;
@@ -21,6 +29,64 @@
                             display: flex;
                             justify-content: center;
                             align-items: center;
+                        }
+                    }
+                }
+
+                &-gallery {
+                    height: 580px;
+                    .swiper {
+                        &.layer-black {
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                background: rgba(0, 0, 0, 0.32);
+                                z-index: 1;
+                                pointer-events: none;
+                            }
+                        }
+
+                        &-slide {
+                            height: 580px;
+                        }
+
+                        &-navigation {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            text-align: center;
+                            position: absolute;
+                            bottom: 37px;
+                            animation: 2;
+                            width: 100%;
+                            color: white;
+                        }
+
+                        &-pagination {
+                            position: relative;
+                        }
+
+                        &-image-alt {
+                            position: relative;
+                            z-index: 2;
+
+                            &-item {
+                                display: none;
+                                &.active {
+                                    display: block;
+                                }
+                            }
+                        }
+
+                        .swiper-button-next:after,
+                        .swiper-button-prev:after {
+                            color: white;
+                            font-size: 32px;
                         }
                     }
                 }
