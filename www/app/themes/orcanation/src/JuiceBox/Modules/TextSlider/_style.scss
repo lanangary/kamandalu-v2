@@ -1,0 +1,34 @@
+.text-slider {
+    &-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 120px;
+    }
+
+    &-content {
+        &-title {
+            margin-bottom: 32px;
+        }
+    }
+
+    &-section {
+        width: 100%;
+    }
+
+    &-slider {
+        &-wrap {
+            position: relative;
+        }
+
+        .swiper {
+            &-wrapper {
+                height: 450px;
+            }
+            &-pagination {
+                position: relative;
+                margin-top: 32px;
+            }
+        }
+    }
+}

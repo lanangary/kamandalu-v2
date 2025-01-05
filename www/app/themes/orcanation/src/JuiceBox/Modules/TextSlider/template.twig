@@ -1,9 +1,45 @@
-{{d(module)}}
-<div class="module padding-fluid text-slider">
+<div class="module padding-fluid text-slider image-{{module.image_position}}">
 
 	<div class="container">
-		<div class="text-slider-section"></div>
+		<div class="text-slider-wrap">
+			<div class="text-slider-section">
+				<div class="text-slider-content">
+					<div class="text-slider-content-title plantin t-italic t-48 color-grey lh-100">
+						{{module.title}}
+					</div>
+					<div class="text-slider-content-description eaves t-20 lh-100 color-grey">
+						{{module.content}}
+					</div>
+				</div>
+			</div>
 
-		<div class="text-slider-section"></div>
+			<div class="text-slider-section">
+				<div class="text-slider-slider">
+					<div class="text-slider-slider-wrap">
+						<div class="swiper">
+
+							<div
+								class="swiper-wrapper">
+								<!-- Slides -->
+								{% for item in module.images %}
+									<div class="swiper-slide">
+										{% include "partials/image.twig" with {
+                                                "image": item,
+                                            } %}
+									</div>
+								{% endfor %}
+
+
+							</div>
+
+
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
