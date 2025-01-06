@@ -1,4 +1,9 @@
 .text-slider {
+    &.image-left {
+        .text-slider-wrap {
+            flex-direction: row-reverse;
+        }
+    }
     &-wrap {
         display: flex;
         justify-content: center;
@@ -9,6 +14,10 @@
     &-content {
         &-title {
             margin-bottom: 32px;
+        }
+
+        &-description {
+            line-height: 140%;
         }
     }
 
@@ -23,11 +32,45 @@
 
         .swiper {
             &-wrapper {
-                height: 450px;
+                height: 550px;
+                aspect-ratio: 1 / 1;
             }
             &-pagination {
                 position: relative;
                 margin-top: 32px;
+
+                &-bullet {
+                    background-color: black;
+                }
+            }
+
+            &-button {
+                &-next,
+                &-prev {
+                    background: $gold;
+                    padding: 34px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &::after {
+                        font-size: 32px;
+                        color: white;
+                    }
+                }
+
+                &-next {
+                    right: -30px;
+                    top: 44%;
+                    scale: 1.2;
+                }
+
+                &-prev {
+                    left: -30px;
+                    top: 44%;
+                    scale: 1.2;
+                }
             }
         }
     }
