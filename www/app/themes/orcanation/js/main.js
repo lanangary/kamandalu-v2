@@ -14,7 +14,7 @@ import 'JBComponent/Header';
 import 'JBComponent/Searchbox';
 import 'JBComponent/PageReader';
 
-// moduless
+// modules
 
 import 'JBModule/Hero';
 import 'JBModule/FeaturedOffer';
