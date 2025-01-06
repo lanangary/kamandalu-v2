@@ -58,6 +58,10 @@
                         font-size: 32px;
                         color: white;
                     }
+
+                    &.swiper-button-disabled {
+                        display: none;
+                    }
                 }
 
                 &-next {
