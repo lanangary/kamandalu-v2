@@ -1,0 +1,26 @@
+.our-location {
+    background-color: #ac93661a;
+    &-title {
+        margin-bottom: 48px;
+    }
+
+    &-desc {
+        margin-bottom: 64px;
+
+        p {
+            width: 55%;
+            text-align: center;
+            display: -webkit-inline-box;
+        }
+    }
+
+    &-map {
+        display: flex;
+        justify-content: center;
+
+        img {
+            height: 600px;
+            width: auto;
+        }
+    }
+}
