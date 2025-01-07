@@ -581,6 +581,36 @@
                             "ui": 0,
                             "ajax": 0,
                             "placeholder": ""
+                        },
+                        {
+                            "key": "field_677d4712aff03",
+                            "label": "Date Picker",
+                            "name": "date_picker",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_6776acf328272",
+                                        "operator": "==",
+                                        "value": "default"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "relevanssi_exclude": 0,
+                            "message": "",
+                            "default_value": 0,
+                            "allow_in_bindings": 0,
+                            "ui_on_text": "Onn",
+                            "ui_off_text": "Off",
+                            "ui": 1
                         }
                     ],
                     "min": "",
@@ -1751,5 +1781,5 @@
     "description": "",
     "show_in_rest": 0,
     "private": true,
-    "modified": 1736253073
+    "modified": 1736263509
 }

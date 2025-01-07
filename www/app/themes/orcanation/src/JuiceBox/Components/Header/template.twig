@@ -109,9 +109,9 @@
 
 			<div class="header-section">
 				<div class="header-section-wrap">
-					<div class="header-section-wrap-logo">
+					<a href="{{ site.url }}" class="header-section-wrap-logo">
 						{% include 'img/logo.twig' %}
-					</div>
+					</a>
 					<div class="header-section-wrap-menu eaves t-14 color-white lh-120 t-uppercase">
 						{% include 'Header/simple-nav.twig' with {
                             menu: theme_menus.header_menu

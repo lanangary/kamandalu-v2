@@ -41,6 +41,7 @@
         "gsap": "^3.12.5",
         "hoverintent": "^2.0.0",
         "imagesloaded": "^4.1.4",
+        "js-datepicker": "^5.18.3",
         "splitting": "^1.1.0",
         "swiper": "^11.1.15",
         "what-input": "^5.1.0"

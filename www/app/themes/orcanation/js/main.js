@@ -8,6 +8,7 @@ import 'JBSrc/in-view';
 import 'JBSrc/gform-spinner';
 import 'JBSrc/gtm-events';
 import 'JBSrc/single-villas';
+import 'JBSrc/datepickers';
 //import 'JBSrc/page-transitions';
 
 import 'JBComponent/Header';
