@@ -31,7 +31,15 @@ class ServiceSlider {
                 centeredSlides: false,
                 roundLengths: true,
                 loopAdditionalSlides: 30,
-                slidesOffsetAfter: 320
+                breakpoints: {
+                    0: {
+                        slidesOffsetAfter: 0,
+                        spaceBetween: 30,
+                    },
+                    768: { 
+                        spaceBetween: 58,
+                    }
+                },
             });
         });
     }

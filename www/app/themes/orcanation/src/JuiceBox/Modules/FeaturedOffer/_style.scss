@@ -8,8 +8,17 @@
     &-wrap {
         display: flex;
 
+        @include mq($until: md) {
+            flex-direction: column !important;
+        }
+
         &-content {
             width: 35%;
+
+            @include mq($until: md) {
+                width: 100%;
+            }
+
             &-subtitle {
                 background-color: $gold;
                 padding: 20px 10px;
@@ -18,12 +27,27 @@
             &-swiper {
                 padding: 80px 45px;
 
+                @include mq($until: md) {
+                    padding: 48px 16px;
+                }
+
                 &-item {
                     display: none;
+
+                    div.featured-offer-wrap-content-swiper-feature-devide:nth-child(2){
+                        @include mq($until: md) {
+                            order: 3;
+                        }
+                    }
 
                     justify-content: space-between;
                     flex-direction: column;
                     min-height: 445px;
+
+                    @include mq($until: md) {
+                        min-height: 300px;
+                    }
+
                     &.active {
                         display: flex;
                     }
@@ -31,17 +55,38 @@
 
                 &-title {
                     margin-bottom: 48px;
+
+                    @include mq($until: md) {
+                        margin-bottom: 24px;
+                    }
                 }
 
                 &-excerpt {
                     margin-bottom: 34px;
+
+                    @include mq($until: md) {
+                        margin-bottom: 24px;
+                    }
                 }
 
                 &-feature {
                     gap: 20px;
 
+                    @include mq($until: md) {
+                        margin-bottom: 24px;
+                    }
+
                     &-section {
                         gap: 10px;
+                    }
+
+                    &-icon{
+                        svg{
+                            @include mq($until: md) {
+                                width: 20px;
+                                height: auto;
+                            } 
+                        }
                     }
                 }
 
@@ -53,6 +98,10 @@
 
                 &-navigation {
                     margin-top: 64px;
+
+                    @include mq($until: md) {
+                        margin-top: 32px;
+                    }
                 }
             }
         }
@@ -60,6 +109,10 @@
         &-image {
             width: 75%;
             overflow: hidden;
+
+            @include mq($until: md) {
+                height: 0px;
+            }
 
             .swiper {
                 &-featured-offer {

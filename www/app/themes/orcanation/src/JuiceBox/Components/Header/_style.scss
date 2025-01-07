@@ -360,8 +360,8 @@
                 gap: 16px;
                 display: flex;
                 flex-direction: column;
-                justify-content: end;
-                align-items: end;
+                justify-content: flex-end;
+                align-items: flex-end;
                 height: 100%;
             }
         }
