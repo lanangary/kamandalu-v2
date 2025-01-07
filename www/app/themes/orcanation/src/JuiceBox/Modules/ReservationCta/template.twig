@@ -1,0 +1,30 @@
+<div class="module padding-fluid reservation-cta">
+	<div class="container">
+
+		<div class="custom-single-culinary-content-item-tab">
+			<div class="custom-single-culinary-content-item-tab-reservation">
+				<div class="custom-single-culinary-content-item-tab-reservation-section">
+					<div class="custom-single-culinary-content-item-tab-reservation-section-title plantin t-32 color-white lh-100 t-italic">
+						{{module.title}}
+					</div>
+				</div>
+
+				<div class="custom-single-culinary-content-item-tab-reservation-section">
+					<div class="custom-single-culinary-content-item-tab-reservation-section-action">
+						<div class="custom-single-culinary-content-item-tab-reservation-section-action-phone eaves t-20 color-white">
+							<a href="{{module.text_link.url}}" target="_blank" rel="noopener noreferrer">{{module.text_link.title}}</a>
+						</div>
+						<div class="custom-single-culinary-content-item-tab-reservation-section-action-button">
+							{% include "partials/button.twig" with{
+                                'link': module.button,
+                                'style': 'mbtn mbtn-gold border-12 t-uppercase eaves t-20'
+                            } %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+</div>

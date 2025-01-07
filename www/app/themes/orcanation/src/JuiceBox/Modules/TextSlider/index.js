@@ -21,7 +21,7 @@ class TextSlider {
             let newSwiper = module.querySelector('.swiper');
             const swiper = new Swiper(newSwiper, {
                 modules: [Navigation, Pagination, EffectFade, Controller],
-                autoHeight: true,
+                autoHeight: false,
                 slidesPerView: 'auto',
                 preventInteractionOnTransition: true,
                 pagination: {

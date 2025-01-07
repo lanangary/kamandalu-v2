@@ -1,0 +1,20 @@
+<div class="module padding-fluid our-location">
+	<div class="container">
+		<div class="our-location-wrap">
+			<div class="our-location-title plantin t-72 lh-100 color-black t-italic t-center">
+				{{module.title}}
+			</div>
+			<div class="our-location-desc eaves t-24 lh-100 color-black t-center">
+				{{module.description|wpautop}}
+			</div>
+
+			<div class="our-location-map">
+				<a href="{{module.image_url.url}}" target="_blank" rel="noopener noreferrer">
+					{% include 'partials/image.twig' with{
+                    'image': module.image,
+                } %}
+				</a>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,11 +1,11 @@
 {
-    "key": "layout_67709ed278ef0",
-    "name": "cta_devider",
-    "label": "Cta Devider",
+    "key": "layout_677c0a865f7ed",
+    "name": "our_location",
+    "label": "Our Location",
     "display": "block",
     "sub_fields": [
         {
-            "key": "field_67709f1a78ef6",
+            "key": "field_677c0a8e5f7ef",
             "label": "Title",
             "name": "title",
             "aria-label": "",
@@ -27,7 +27,7 @@
             "append": ""
         },
         {
-            "key": "field_67709f2378ef7",
+            "key": "field_677c0a965f7f0",
             "label": "Description",
             "name": "description",
             "aria-label": "",
@@ -49,27 +49,9 @@
             "delay": 0
         },
         {
-            "key": "field_67709fd478ef8",
-            "label": "Button",
-            "name": "button",
-            "aria-label": "",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "relevanssi_exclude": 0,
-            "return_format": "array",
-            "allow_in_bindings": 0
-        },
-        {
-            "key": "field_67709fdd78ef9",
-            "label": "Background",
-            "name": "background",
+            "key": "field_677c0a9f5f7f1",
+            "label": "image",
+            "name": "image",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -94,11 +76,11 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_677c02100a01e",
-            "label": "Style",
-            "name": "style",
+            "key": "field_677c0aaa5f7f2",
+            "label": "Image Url",
+            "name": "image_url",
             "aria-label": "",
-            "type": "select",
+            "type": "link",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -108,18 +90,8 @@
                 "id": ""
             },
             "relevanssi_exclude": 0,
-            "choices": {
-                "bull": "Full Widht",
-                "banner": "banner"
-            },
-            "default_value": "bull",
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 0,
-            "allow_in_bindings": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": ""
+            "return_format": "array",
+            "allow_in_bindings": 0
         }
     ],
     "min": "",

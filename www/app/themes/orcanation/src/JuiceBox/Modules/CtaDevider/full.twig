@@ -1,0 +1,23 @@
+<div class="module padding-fluid cta-devider">
+	<div class="cta-devider-image">
+		{% include 'partials/image.twig' with{
+        'image': module.background,
+        } %}
+	</div>
+	<div class="container">
+		<div class="cta-devider-wrap">
+			<div class="cta-devider-title plantin t-96 color-white t-italic">
+				{{module.title}}
+			</div>
+			<div class="cta-devider-desc eaves t-24 color-white lh-100 t-center">
+				{{module.description|wpautop}}
+			</div>
+			<div class="cta-devider-button">
+				{% include 'partials/button.twig' with{
+                'link': module.button,
+                'style': 'mbtn mbtn-white',
+                } %}
+			</div>
+		</div>
+	</div>
+</div>
