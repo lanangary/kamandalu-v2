@@ -1511,6 +1511,38 @@
                     "max": ""
                 },
                 {
+                    "key": "layout_677d1e71ce9a8",
+                    "name": "video_module",
+                    "label": "Video Module",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_677d1e81ce9aa",
+                            "label": "Video",
+                            "name": "video",
+                            "aria-label": "",
+                            "type": "file",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "relevanssi_exclude": 0,
+                            "return_format": "array",
+                            "library": "all",
+                            "min_size": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "allow_in_bindings": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
                     "key": "layout_677a0e52248fd",
                     "name": "accordion",
                     "label": "accordion",
@@ -1719,5 +1751,5 @@
     "description": "",
     "show_in_rest": 0,
     "private": true,
-    "modified": 1736252443
+    "modified": 1736253073
 }

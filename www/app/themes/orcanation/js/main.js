@@ -24,3 +24,4 @@ import 'JBModule/DiningAndOffer';
 import 'JBModule/Accordion';
 import 'JBModule/GallerySlide';
 import 'JBModule/TextSlider';
+import 'JBModule/VideoModule';
