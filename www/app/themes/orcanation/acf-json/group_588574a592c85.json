@@ -19,6 +19,38 @@
             "relevanssi_exclude": 0,
             "layouts": [
                 {
+                    "key": "layout_677d1c0530a2b",
+                    "name": "center_text",
+                    "label": "Center Text",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_677d1c1030a2d",
+                            "label": "Content",
+                            "name": "content",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "relevanssi_exclude": 0,
+                            "default_value": "",
+                            "allow_in_bindings": 0,
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
                     "key": "layout_67709ed278ef0",
                     "name": "cta_devider",
                     "label": "Cta Devider",
@@ -1687,5 +1719,5 @@
     "description": "",
     "show_in_rest": 0,
     "private": true,
-    "modified": 1736182480
+    "modified": 1736252443
 }
