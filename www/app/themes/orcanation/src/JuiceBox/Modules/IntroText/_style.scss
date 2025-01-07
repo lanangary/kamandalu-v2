@@ -7,5 +7,12 @@
         display: flex;
         justify-content: center;
         gap: 20px;
+        align-items: center;
+
+        &-icon-image{
+            width: 14px;
+            height: auto;
+            max-width: none;
+        }
     }
 }

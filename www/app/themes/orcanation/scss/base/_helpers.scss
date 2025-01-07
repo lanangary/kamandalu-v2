@@ -179,6 +179,10 @@
 
     &-48 {
         gap: 48px;
+
+        @include mq($until: md) {
+            gap: 24px;
+        }
     }
 
     &-32 {

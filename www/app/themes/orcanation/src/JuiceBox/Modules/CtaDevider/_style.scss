@@ -56,6 +56,10 @@
     height: 450px;
     overflow: hidden;
 
+    @include mq($until: md) {
+        height: 400px;
+    }
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,6 +74,13 @@
         z-index: 0;
     }
 
+    &-title{
+        @include mq($until: md) {
+            max-width: 90%;
+            text-align: center;
+        }
+    }
+
     .container {
         position: absolute;
         top: 0;
@@ -80,6 +91,10 @@
         max-width: unset;
         max-width: 1440px;
         margin: auto;
+
+        @include mq($until: md) {
+            padding: 56px 0px;
+        }
     }
 
     &-image {
@@ -87,5 +102,9 @@
         height: 100%;
         max-width: 1440px;
         width: 100%;
+
+        @include mq($until: md) {
+            padding: 56px 0;
+        }
     }
 }
