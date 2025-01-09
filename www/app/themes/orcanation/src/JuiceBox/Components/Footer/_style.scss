@@ -225,6 +225,35 @@
             justify-content: space-between;
             gap: 180px;
         }
+
+        &-content {
+            &-form {
+                .gform_heading {
+                    display: none !important;
+                }
+
+                .ginput_container {
+                    input {
+                        height: 60px !important;
+                        border-radius: 8px !important;
+                        font-family: 'MrEavesModOT', sans-serif !important;
+                        font-size: 20px !important;
+                        padding: 20px !important;
+                    }
+                }
+
+                .gform_footer {
+                    input {
+                        padding: 18px 24px !important;
+                        background: white !important;
+                        color: black !important;
+                        border-radius: 8px !important;
+                        font-size: 24px !important;
+                        font-family: 'MrEavesModOT', sans-serif !important;
+                    }
+                }
+            }
+        }
     }
 
     &-menu {

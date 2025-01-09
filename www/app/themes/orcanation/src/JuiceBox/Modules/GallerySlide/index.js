@@ -13,6 +13,8 @@ class GallerySlide {
             return;
         }
 
+        console.log('GallerySlide.js loaded');
+
         this.slider();
     }
 
@@ -49,7 +51,10 @@ class GallerySlide {
                             content.forEach(item => {
                                 item.classList.remove('active');
                             });
-                            content[swiper.realIndex].classList.add('active');
+
+                            if (content[swiper.realIndex]) {
+                                content[swiper.realIndex].classList.add('active');
+                            }
                         }, 200);
                     }
                 }
