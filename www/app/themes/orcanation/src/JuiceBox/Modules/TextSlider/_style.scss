@@ -9,6 +9,11 @@
         justify-content: center;
         align-items: center;
         gap: 120px;
+
+        @include mq($until: md) {
+            flex-direction: column !important;
+            gap: 24px;
+        }
     }
 
     &-content {
@@ -34,6 +39,10 @@
             &-wrapper {
                 height: 550px;
                 aspect-ratio: 1 / 1;
+
+                @include mq($until: md) {
+                    height: auto;
+                }
             }
             &-pagination {
                 position: relative;
@@ -68,12 +77,22 @@
                     right: -30px;
                     top: 44%;
                     scale: 1.2;
+
+                    @include mq($until: md) {
+                        right: -5px;
+                        top: 42%;
+                    }
                 }
 
                 &-prev {
                     left: -30px;
                     top: 44%;
                     scale: 1.2;
+
+                    @include mq($until: md) {
+                        left: -5px;
+                        top: 42%;
+                    }
                 }
             }
         }

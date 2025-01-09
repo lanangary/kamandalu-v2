@@ -5,18 +5,20 @@
 			<div class="intro-text-content eaves t-32 lh-110 color-grey">
 				{{module.content|wpautop}}
 			</div>
-			<div class="intro-text-tail">
-				<div class="intro-text-tail-icon">
-					{% include 'partials/image.twig' with{
-                    'image': module.icon,
-                    'size': 'medium',
-                    'class': 'intro-text-tail-icon-image'
-                } %}
+			{% if module.icon %}
+				<div class="intro-text-tail">
+					<div class="intro-text-tail-icon">
+						{% include 'partials/image.twig' with{
+						'image': module.icon,
+						'size': 'medium',
+						'class': 'intro-text-tail-icon-image'
+					} %}
+					</div>
+					<div class="intro-text-tail-text eaves t-20 lh-100 color-grey">
+						{{module.tail_text}}
+					</div>
 				</div>
-				<div class="intro-text-tail-text eaves t-20 lh-100 color-grey">
-					{{module.tail_text}}
-				</div>
-			</div>
+			{% endif %}
 		</div>
 
 	</div>
