@@ -261,5 +261,52 @@
             display: flex;
             justify-content: space-between;
         }
+
+        &-section {
+            &:not(:first-child) {
+                display: flex;
+                justify-content: flex-end;
+                width: 100%;
+                gap: 90px;
+            }
+        }
+
+        &-item {
+            &-section {
+                &:not(:first-child) {
+                    display: flex;
+                    justify-content: flex-end;
+                    width: 100%;
+                }
+            }
+
+            &-list {
+                display: flex;
+                gap: 180px;
+                &-wrap {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                &-main {
+                    font-family: 'Plantin', serif;
+                    font-size: 24px;
+                    font-style: italic;
+                    margin-bottom: 16px;
+                }
+
+                &-sub {
+                    display: flex;
+                    flex-direction: column;
+
+                    .footer-menu-item-list-main {
+                        font-family: 'MrEavesModOT', sans-serif;
+                        font-size: 20px;
+                        font-weight: 400;
+                        font-style: normal;
+                    }
+                }
+            }
+        }
     }
 }

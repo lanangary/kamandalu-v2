@@ -1,0 +1,28 @@
+<a href="{{ item.link }}" class="item--{{ level }} footer-menu-item-list-{{isclass}}">
+	<span class="nav__title">{{ item }}</span>
+
+	{% if item.children is not empty %}
+		{% if isicon %}
+			{{ svg_icon('header-icon/plus') }}
+		{% endif %}
+	{% else %}
+		{% if isicon %}
+			{{ svg_icon('header-icon/arrow-degree') }}
+		{% endif %}
+	{% endif %}
+</a>
+{% if item.children is not empty %}
+	<div class="footer-menu-item-list-sub">
+		{% for child in item.children %}
+
+			{% include 'Footer/simple-footer-child.twig' with {
+                    item: child,
+                    level: level + 1,
+                    isicon: false,
+                    isclas : 'sub'
+                } %}
+		{% endfor %}
+	</div>
+
+
+{% endif %}

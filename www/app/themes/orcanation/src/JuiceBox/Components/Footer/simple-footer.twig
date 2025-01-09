@@ -1,0 +1,10 @@
+{% for item in menu.get_items %}
+	<div class="footer-menu-item-list-wrap">
+		{% include 'Footer/simple-footer-child.twig' with {
+            item: item,
+            level: 0,
+            isicon: isicon,
+            isclass: 'main'
+        } %}
+	</div>
+{% endfor %}

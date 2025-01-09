@@ -38,16 +38,15 @@
 				<div class="footer-menu-section">
 					<div class="footer-menu-item">
 						<div class="footer-menu-item-list">
-							{% include 'Header/nav.twig' with {
+							{% include 'Footer/simple-footer.twig' with {
 								menu: theme_menus.footer_menu
 						} only %}
 						</div>
 					</div>
 					<div class="footer-menu-item menu-social">
-						<div class="footer-menu-item-list">
-							{% include 'Header/nav.twig' with {
-							menu: theme_menus.footer_menu
-						} only %}
+						<div class="footer-menu-item-list">{% include 'Header/nav.twig' with {
+																							menu: theme_menus.footer_menu
+																						} only %}
 						</div>
 					</div>
 				</div>
