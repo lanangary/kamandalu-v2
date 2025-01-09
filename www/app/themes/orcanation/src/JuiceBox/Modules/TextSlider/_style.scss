@@ -19,6 +19,10 @@
     &-content {
         &-title {
             margin-bottom: 32px;
+
+            @include mq($until: md) {
+                margin-bottom: 24px;
+            }
         }
 
         &-description {
@@ -63,9 +67,17 @@
                     justify-content: center;
                     align-items: center;
 
+                    @include mq($until: md) {
+                        padding: 28px;
+                    }
+
                     &::after {
                         font-size: 32px;
                         color: white;
+
+                        @include mq($until: md) {
+                            font-size: 24px;
+                        }
                     }
 
                     &.swiper-button-disabled {

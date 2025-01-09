@@ -1,6 +1,11 @@
 .center-text {
     &-content {
         width: 80%;
+
+        @include mq($until: md) {
+            width: 100%;
+        }
+
         &-wrap {
             display: flex;
             flex-direction: column;

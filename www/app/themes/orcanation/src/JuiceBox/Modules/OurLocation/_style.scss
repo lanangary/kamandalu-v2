@@ -2,15 +2,31 @@
     background-color: #ac93661a;
     &-title {
         margin-bottom: 48px;
+
+        @include mq($until: md) {
+            margin-bottom: 24px;
+        }
     }
 
     &-desc {
         margin-bottom: 64px;
 
+        @include mq($until: md) {
+            margin-bottom: 32px;
+        }
+
         p {
             width: 55%;
             text-align: center;
             display: -webkit-inline-box;
+
+            @include mq($until: xl) {
+                width: 80%;
+            }
+
+            @include mq($until: md) {
+                width: 100%;
+            }
         }
     }
 
@@ -21,6 +37,14 @@
         img {
             height: 600px;
             width: auto;
+
+            @include mq($until: lg) {
+                height: 500px;
+            }
+
+            @include mq($until: md) {
+                height: 350px;
+            }
         }
     }
 }

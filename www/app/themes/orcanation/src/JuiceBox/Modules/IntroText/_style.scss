@@ -1,6 +1,16 @@
 .intro-text {
+    .container {
+        @include mq($until: md) {
+            padding: 48px 16px 48px;
+        }
+    }
+
     &-content {
         margin-bottom: 35px;
+
+        @include mq($until: lg) {
+            margin-bottom: 0px;
+        }
     }
 
     &-tail {
@@ -9,7 +19,11 @@
         gap: 20px;
         align-items: center;
 
-        &-icon-image{
+        @include mq($until: md) {
+            margin-top: 24px;
+        }
+
+        &-icon-image {
             width: 14px;
             height: auto;
             max-width: none;

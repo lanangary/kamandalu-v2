@@ -19,6 +19,11 @@
             width: 100%;
             aspect-ratio: 1 / 1;
 
+            @include mq($until: lg) {
+                height: 500px;
+                aspect-ratio: 2 / 3;
+            }
+
             @include mq($until: md) {
                 height: auto;
             }
@@ -39,8 +44,18 @@
             gap: 24px;
             height: 100%;
 
+            @include mq($until: lg) {
+                padding: 0px 50px 0px 50px;
+            }
+
             @include mq($until: md) {
                 padding: 32px 16px 48px;
+            }
+
+            &-description p {
+                @include mq($until: lg) {
+                    line-height: normal;
+                }
             }
         }
     }
