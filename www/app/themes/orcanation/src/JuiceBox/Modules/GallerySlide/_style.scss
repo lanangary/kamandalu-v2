@@ -1,4 +1,10 @@
 .croped-gallery {
+    .container {
+        @include mq($until: md) {
+            padding: 24px 0px;
+        }
+    }
+
     .swiper {
         height: 100%;
         width: 100%;
@@ -11,6 +17,10 @@
             position: relative;
             overflow: hidden;
             aspect-ratio: 16/9;
+
+            @include mq($until: md) {
+                width: 90%;
+            }
 
             img {
                 width: 100%;
@@ -35,6 +45,29 @@
             &-bullet {
                 background: white;
                 scale: 2;
+            }
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            @include mq($until: md) {
+                border-radius: 100%;
+            }
+        }
+
+        .swiper-button-next {
+            right: var(--swiper-navigation-sides-offset, 30px);
+        }
+
+        .swiper-button-prev {
+            left: var(--swiper-navigation-sides-offset, 30px);
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            @include mq($until: md) {
+                font-size: 30px;
+                font-weight: bold;
             }
         }
     }

@@ -34,12 +34,12 @@ class ServiceSlider {
                 breakpoints: {
                     0: {
                         slidesOffsetAfter: 0,
-                        spaceBetween: 30,
+                        spaceBetween: 30
                     },
-                    768: { 
-                        spaceBetween: 58,
+                    992: {
+                        spaceBetween: 58
                     }
-                },
+                }
             });
         });
     }

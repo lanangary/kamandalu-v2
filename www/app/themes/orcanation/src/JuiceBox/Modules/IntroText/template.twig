@@ -5,7 +5,7 @@
 			<div class="intro-text-content eaves t-32 lh-110 color-grey">
 				{{module.content|wpautop}}
 			</div>
-			{% if module.icon %}
+			{% if module.icon or module.tail_text %}
 				<div class="intro-text-tail">
 					<div class="intro-text-tail-icon">
 						{% include 'partials/image.twig' with{

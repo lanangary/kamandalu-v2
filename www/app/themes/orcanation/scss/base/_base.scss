@@ -45,6 +45,18 @@ body {
 
 .content-wrap {
     flex: 1 0 auto;
+
+    .module:nth-child(2) {
+        .container {
+            @include mq($until: md) {
+                padding-top: 56px;
+            }
+
+            @include mq($until: md) {
+                padding-top: 48px;
+            }
+        }
+    }
 }
 
 .page-wrap {
@@ -116,7 +128,7 @@ button {
         }
 
         @include mq($until: md) {
-            padding: 56px 16px;
+            padding: 48px 16px;
         }
 
         &-header {
@@ -296,7 +308,7 @@ p {
     &-40 {
         font-size: 40px;
 
-        @include mq($until: md) {
+        @include mq($until: lg) {
             font-size: 38px;
             line-height: normal;
         }
@@ -312,10 +324,19 @@ p {
 
     &-64 {
         font-size: 64px;
+
+        @include mq($until: md) {
+            font-size: 48px;
+            line-height: normal;
+        }
     }
 
     &-72 {
         font-size: 72px;
+
+        @include mq($until: lg) {
+            font-size: 64px;
+        }
 
         @include mq($until: md) {
             font-size: 48px;

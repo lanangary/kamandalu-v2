@@ -13,6 +13,11 @@
                 width: 100%;
                 align-items: center;
 
+                @include mq($until: md) {
+                    flex-direction: column;
+                    gap: 24px;
+                }
+
                 &-section {
                     &-action {
                         display: flex;

@@ -74,7 +74,7 @@
         z-index: 0;
     }
 
-    &-title{
+    &-title {
         @include mq($until: md) {
             max-width: 90%;
             text-align: center;
@@ -93,7 +93,7 @@
         margin: auto;
 
         @include mq($until: md) {
-            padding: 56px 0px;
+            padding: 48px 0px;
         }
     }
 
@@ -103,8 +103,12 @@
         max-width: 1440px;
         width: 100%;
 
+        @include mq($until: lg) {
+            padding: 56px 64px;
+        }
+
         @include mq($until: md) {
-            padding: 56px 0;
+            padding: 48px 0;
         }
     }
 }
