@@ -101,9 +101,9 @@
 		<div class="header-wrap">
 			<div class="header-section">
 				<div class="header-section-wrap">
-					<div class="header-section-wrap-toogle">
+					<button class="header-section-wrap-toogle btn-transparent btn-no-border">
 						{% include 'img/hamburger.svg' %}
-					</div>
+					</button>
 				</div>
 			</div>
 
@@ -141,6 +141,14 @@
 
 				</div>
 			</div>
+		</div>
+	</div>
+	<div class="header-slide">
+		<div class="header-slide-wrap">
+			{% include 'Header/nav.twig' with {
+                        menu: theme_menus.header_menu_slide,
+                        isicon: true
+                    } only %}
 		</div>
 	</div>
 </div>

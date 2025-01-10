@@ -31,6 +31,10 @@ html {
 body {
     color: $body-color;
     background-color: $body-bg;
+
+    &.no-scroll {
+        overflow: hidden;
+    }
 }
 
 ::selection {

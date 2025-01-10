@@ -343,10 +343,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        width: 100%;
+        justify-content: space-between;
     }
 
     &-section {
-        width: 15%;
+        width: auto;
 
         &:nth-child(2) {
             width: 70%;
@@ -378,11 +381,101 @@
                 display: flex;
                 gap: 40px;
                 align-items: center;
-                scale: 1.1;
+                scale: 1;
             }
 
             &-button {
                 width: 100%;
+            }
+        }
+    }
+
+    &-slide {
+        width: max-content;
+        height: 100vh;
+        background: white;
+        padding: 32px;
+        padding-top: 52px;
+        overflow: auto;
+        height: calc(100vh - 150px);
+
+        transition: $transition-default;
+        left: -66%;
+        position: relative;
+
+        &.slide {
+            left: 0;
+        }
+
+        &-wrap {
+            .nav {
+                flex-direction: column;
+
+                li {
+                    &.nav__item {
+                        a {
+                            border-bottom: solid 1px black;
+                            padding: 12px 0px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                        }
+
+                        &.nav__item--1 {
+                            a {
+                                border-bottom: none;
+                            }
+
+                            &:last-child {
+                                a {
+                                    border-bottom: solid 1px black;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .nav__title {
+                    font-family: 'MrEavesModOT', sans-serif;
+                    font-size: 20px;
+                    color: black;
+                }
+                .menu-item-has-children {
+                    .nav__submenu {
+                        height: auto;
+                        overflow: hidden;
+                        transition: $transition-default;
+
+                        &.init {
+                            height: auto !important;
+                        }
+
+                        &.close {
+                            height: 0px;
+                        }
+
+                        &.open {
+                            height: var(--height, auto);
+                        }
+                    }
+                }
+
+                .nav__submenu {
+                    position: relative;
+                    pointer-events: auto;
+                    z-index: 1;
+                    opacity: 1;
+                    padding: unset;
+                    background-color: transparent;
+                    color: black;
+
+                    li {
+                        a {
+                            font-family: 'MrEavesModOT', sans-serif;
+                            font-size: 20px;
+                        }
+                    }
+                }
             }
         }
     }

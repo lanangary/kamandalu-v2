@@ -85,3 +85,13 @@
         }
     }
 }
+
+.btn {
+    &-transparent {
+        background-color: transparent;
+    }
+
+    &-no-border {
+        border: none;
+    }
+}
