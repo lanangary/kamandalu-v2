@@ -14,6 +14,16 @@ class ServiceSlider {
         }
 
         this.slider();
+
+        window.addEventListener('resize', () => {
+            this.modules.forEach(module => {
+                let newSwiper = module.querySelector('.swiper');
+                if (newSwiper.swiper) {
+                    newSwiper.swiper.destroy();
+                }
+            });
+            this.slider();
+        });
     }
 
     slider() {
@@ -36,7 +46,7 @@ class ServiceSlider {
                         slidesOffsetAfter: 0,
                         spaceBetween: 30
                     },
-                    992: {
+                    1280: {
                         spaceBetween: 58
                     }
                 }

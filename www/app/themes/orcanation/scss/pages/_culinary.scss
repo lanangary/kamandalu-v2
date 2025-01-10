@@ -7,8 +7,24 @@
             &-item {
                 margin: 48px 98px;
 
+                @include mq($until: lg) {
+                    margin: 56px 64px;
+                }
+
+                @include mq($until: md) {
+                    margin: 48px 16px;
+                }
+
                 &.tb-96 {
                     margin: 96px;
+
+                    @include mq($until: lg) {
+                        margin: 56px 64px;
+                    }
+
+                    @include mq($until: md) {
+                        margin: 48px 16px;
+                    }
                 }
 
                 &-tab {
@@ -22,11 +38,22 @@
                         width: 100%;
                         align-items: center;
 
+                        @include mq($until: lg) {
+                            flex-direction: column;
+                            gap: 24px;
+                        }
+
                         &-section {
                             &-action {
                                 display: flex;
                                 align-items: center;
                                 gap: 45px;
+
+                                @include mq($until: lg) {
+                                    flex-wrap: wrap;
+                                    gap: 24px;
+                                    justify-content: center;
+                                }
                             }
                         }
                     }
@@ -52,6 +79,10 @@
                 &-galery {
                     &-heading {
                         margin-bottom: 48px;
+
+                        @include mq($until: lg) {
+                            margin-bottom: 24px;
+                        }
                     }
                 }
             }

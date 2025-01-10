@@ -7,6 +7,14 @@
             &-item {
                 margin: 48px 96px;
 
+                @include mq($until: lg) {
+                    margin: 56px 64px;
+                }
+
+                @include mq($until: md) {
+                    margin: 48px 16px;
+                }
+
                 &.width-full {
                     margin: 48px 0px;
                 }
@@ -35,6 +43,11 @@
 
                 &-gallery {
                     height: 580px;
+
+                    @include mq($until: md) {
+                        height: 400px;
+                    }
+
                     .swiper {
                         &.layer-black {
                             &::after {
@@ -52,6 +65,10 @@
 
                         &-slide {
                             height: 580px;
+
+                            @include mq($until: md) {
+                                height: 400px;
+                            }
                         }
 
                         &-navigation {

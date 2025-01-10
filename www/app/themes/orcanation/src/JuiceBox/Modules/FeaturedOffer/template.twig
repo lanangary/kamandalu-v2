@@ -62,13 +62,6 @@
 								} %}
 							</div>
 						</div>
-						<div class="featured-offer-wrap-content-swiper-feature-devide hidden-from-md">
-							<div class="featured-offer-wrap-image-item {{loop.first ? 'active' : ''}}">
-								{% include 'partials/image.twig' with{
-									'image': item.thumbnail,
-								} %}
-							</div>
-						</div>
 					</div>
 				{% endfor %}
 				<div class="featured-offer-wrap-content-swiper-navigation display-flex flex-justify-start gap-48">
@@ -104,6 +97,11 @@
 			</div>
 
 
+		</div>
+		<div class="featured-offer-wrap-content hidden-from-lg">
+			<div class="featured-offer-wrap-content-subtitle display-flex flex-justify-center eaves t-32 lh-100 color-white">
+				{{module.subtitle}}
+			</div>
 		</div>
 	</div>
 </div>

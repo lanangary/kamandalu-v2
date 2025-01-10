@@ -273,6 +273,10 @@ p {
 
     &-20 {
         font-size: 20px;
+
+        @include mq($until: md) {
+            line-height: 1.3;
+        }
     }
 
     &-22 {
@@ -309,7 +313,7 @@ p {
         font-size: 40px;
 
         @include mq($until: lg) {
-            font-size: 38px;
+            font-size: 34px;
             line-height: normal;
         }
     }
