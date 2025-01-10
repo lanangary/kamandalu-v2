@@ -23,15 +23,20 @@
 	</div>
 
 	<div class="footer-menu">
-		<div class="container">
+		<div class="container con-menus">
 			<div class="footer-menu-wrap">
 				<div class="footer-menu-section">
 					<div class="footer-menu-cta">
-						<div class="footer-menu-cta-title">
-							Your next getawaystarts with us
+						<div class="footer-menu-cta-title plantin t-48 color-gold t-italic lh-100">
+							Your next getaway starts with us
 						</div>
 						<div class="footer-menu-cta-button">
-							<a href="#" class="button button--primary">Book Your stay</a>
+							<a href="#" class="button button--primary eaves t-16 color-gold t-uppercase">
+								<i>{% include "img/footer-arrow.svg" %}</i>
+								<span>
+									Book Your stay
+								</span>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -44,12 +49,54 @@
 						</div>
 					</div>
 					<div class="footer-menu-item menu-social">
-						<div class="footer-menu-item-list">{% include 'Header/nav.twig' with {
-																							menu: theme_menus.footer_menu
-																						} only %}
+						<div class="footer-menu-item-list">
+							<div class="menu-social-title plantin t-24 t-italic color-gold">
+								Social
+							</div>
+							<div class="menu-social-item">
+								{% for item in options.social_links %}
+									<a href="{{ item.link }}" class="footer-gc__social_link" target="_blank">
+										<span class="sr-only">{{ item.type.label }}</span>
+										{% include 'img/social.twig' with{
+										type: item.type.value
+									} %}
+										{# {{ icon(item.type.value) }} #}
+									</a>
+								{% endfor %}
+							</div>
+							<div class="menu-social-certified">
+								Certified
+							</div>
+
 						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+		<div class="container con-legal">
+			<div class="footer-menu-legal eaves color-black t-16">
+				<div class="footer-menu-legal-wrap">
+					<div class="footer-menu-legal-copyright">
+						©
+						{{"now"|date("Y")}}
+						kamandalu ubud. All rights reserved.
+					</div>
+
+					<div class="footer-menu-legal-links">
+						{% include 'Footer/simple-footer.twig' with {
+						menu: theme_menus.legal_menu
+					} only %}
+					</div>
+				</div>
+
+				<div class="footer-menu-legal-wrap">
+					<div class="footer-menu-legal-email">
+						<a href="mailto:sales@kamandalu" target="_blank" rel="noopener noreferrer">
+							sales@kamandalu
+						</a>
+					</div>
+				</div>
+
 			</div>
 		</div>
 	</div>

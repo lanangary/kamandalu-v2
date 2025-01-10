@@ -59,6 +59,13 @@ body {
     }
 }
 
+.container {
+    &.no-tb {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+}
+
 .page-wrap {
     width: 100%;
     overflow: hidden;
