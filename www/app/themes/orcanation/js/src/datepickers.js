@@ -68,6 +68,11 @@ class DatePickers {
                 button.href = `https://www.book-secure.com/index.php?s=results&property=${properties}&arrival=${bookstart}&departure=${bookend}&adults1=1&children1=0&locale=en_GB&currency=IDR&stid=udbo2ur6g`;
             }
         });
+
+        elstart.addEventListener('touchend', () => {
+            console.log('start');
+            pickerstart.show();
+        });
     }
 }
 

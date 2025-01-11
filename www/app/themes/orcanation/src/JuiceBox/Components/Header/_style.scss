@@ -352,6 +352,10 @@
     &-section {
         width: auto;
 
+        @include mq($until: 'lg') {
+            width: 100%;
+        }
+
         &:nth-child(2) {
             display: flex;
             justify-content: center;
@@ -381,6 +385,14 @@
                 align-items: center;
                 justify-content: center;
                 margin-bottom: 14px;
+
+                svg {
+                    width: clamp(85px, calc(116 * 100vw / 1440), 116px);
+                }
+
+                @include mq($until: 'lg') {
+                    margin-bottom: 0px;
+                }
             }
 
             &-menu {
@@ -424,6 +436,13 @@
 
                 @include mq($until: 'lg') {
                     width: auto;
+
+                    .mbtn-mini {
+                        background-color: transparent;
+                        border-color: white;
+                        font-size: 12px;
+                        color: white;
+                    }
                 }
             }
         }
@@ -484,9 +503,11 @@
                         height: auto;
                         overflow: hidden;
                         transition: $transition-default;
-
+                        display: flex;
+                        flex-direction: column;
                         &.init {
                             height: auto !important;
+                            display: block !important;
                         }
 
                         &.close {

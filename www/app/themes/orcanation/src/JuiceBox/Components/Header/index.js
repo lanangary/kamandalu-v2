@@ -97,7 +97,9 @@ function calculateheight() {
         // add style --height : submenuHeight to submenu
         submenu.style.setProperty('--height', submenuHeight + 'px');
 
-        submenu.classList.remove('init');
+        if (submenu.style.maxHeight !== '0px') {
+            submenu.classList.remove('init');
+        }
 
         submenu.classList.add('close');
     });

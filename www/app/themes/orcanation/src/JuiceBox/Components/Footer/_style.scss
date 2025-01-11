@@ -313,12 +313,10 @@
                 gap: 90px;
 
                 @include mq($until: 'lg') {
+                    flex-direction: column;
                     gap: unset;
                 }
             }
-
-            flex-direction: column;
-            gap: unset;
         }
 
         &-item {
