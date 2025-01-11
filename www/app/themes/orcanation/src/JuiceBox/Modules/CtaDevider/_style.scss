@@ -104,7 +104,7 @@
         width: 100%;
 
         @include mq($until: lg) {
-            padding: 56px 64px;
+            padding: 46px 32px;
         }
 
         @include mq($until: md) {

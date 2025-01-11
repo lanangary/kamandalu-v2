@@ -5,11 +5,19 @@
         }
     }
 
+    &-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     &-content {
+        width: 80%;
         margin-bottom: 35px;
 
         @include mq($until: lg) {
             margin-bottom: 0px;
+            width: 100%;
         }
     }
 

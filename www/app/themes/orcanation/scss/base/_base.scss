@@ -57,7 +57,8 @@ body {
             }
 
             @include mq($until: md) {
-                padding-top: 48px;
+                padding-top: 32px;
+                padding-bottom: 32px;
             }
         }
     }
@@ -135,11 +136,11 @@ button {
         max-width: 1440px;
 
         @include mq($until: lg) {
-            padding: 56px 64px;
+            padding: 46px 32px;
         }
 
         @include mq($until: md) {
-            padding: 0px 16px;
+            padding: 24px 16px;
         }
 
         &-header {
@@ -209,6 +210,18 @@ p {
 
     &-underline {
         text-decoration: underline;
+    }
+}
+
+@include mq($until: 'lg') {
+    .tm {
+        &-left {
+            text-align: left;
+
+            p {
+                text-align: left !important;
+            }
+        }
     }
 }
 
@@ -289,7 +302,7 @@ p {
         font-size: 20px;
 
         @include mq($until: md) {
-            line-height: 1.3;
+            line-height: 110%;
         }
     }
 
@@ -302,7 +315,7 @@ p {
 
         @include mq($until: md) {
             font-size: 20px;
-            line-height: 1.3;
+            line-height: 110%;
         }
     }
 
@@ -314,29 +327,35 @@ p {
         font-size: 32px;
 
         @include mq($until: md) {
-            font-size: 24px;
-            line-height: 1.3;
+            font-size: 20px;
+            line-height: 110%;
         }
     }
 
     &-36 {
         font-size: 36px;
+        font-size: clamp(28px, calc(36 * 100vw / 1440), 36px);
+
+        @include mq($until: lg) {
+            line-height: 110%;
+        }
     }
 
     &-40 {
         font-size: 40px;
 
         @include mq($until: lg) {
-            font-size: 34px;
+            font-size: 32px;
             line-height: normal;
         }
     }
 
     &-48 {
         font-size: 48px;
+        font-size: clamp(38px, calc(48 * 100vw / 1440), 48px);
 
-        @include mq($until: md) {
-            font-size: 36px;
+        @include mq($until: 'lg') {
+            font-size: clamp(32px, calc(32 * 100vw / 390), 48px);
         }
     }
 
@@ -351,13 +370,9 @@ p {
 
     &-72 {
         font-size: 72px;
-
-        @include mq($until: lg) {
-            font-size: 64px;
-        }
+        font-size: clamp(36px, calc(72 * 100vw / 1440), 72px);
 
         @include mq($until: md) {
-            font-size: 48px;
             line-height: normal;
         }
     }
@@ -375,4 +390,13 @@ p {
 
 .left {
     rotate: 180deg;
+}
+
+// swiper navigation
+
+.icon-black {
+    @include mq($until: 'lg') {
+        width: 40px;
+        height: auto;
+    }
 }

@@ -256,10 +256,10 @@
 
                 .ginput_container {
                     input {
-                        height: 60px !important;
+                        height: clamp(45px, calc(60 * 100vw / 1440), 60px) !important;
                         border-radius: 8px !important;
                         font-family: 'MrEavesModOT', sans-serif !important;
-                        font-size: 20px !important;
+                        font-size: clamp(16px, calc(20 * 100vw / 1440), 20px) !important;
                         padding: 20px !important;
                     }
                 }
@@ -274,6 +274,10 @@
                         font-family: 'MrEavesModOT', sans-serif !important;
                     }
                 }
+            }
+
+            &-title {
+                margin-bottom: clamp(16px, calc(32 * 100vw / 1440), 32px);
             }
         }
     }

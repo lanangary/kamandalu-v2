@@ -1,4 +1,8 @@
 .service-slider {
+    @include mq($until: 'lg') {
+        border-top: solid 1px $grey;
+    }
+
     &-heading {
         display: flex;
         margin-bottom: 48px;
@@ -123,9 +127,11 @@
         &-image {
             height: 300px;
             overflow: hidden;
+            aspect-ratio: 500 / 300;
 
             @include mq($until: xl) {
                 width: 100%;
+                height: auto;
             }
 
             .style-bordered & {
