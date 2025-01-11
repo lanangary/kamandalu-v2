@@ -14,12 +14,21 @@ class FeaturedOffer {
         }
 
         this.slider();
+
+        //load when resize window and destroy first
+        window.addEventListener('resize', () => {
+            this.modules.forEach(module => {
+                let newSwiper = module.querySelector('.swiper-featured-offer');
+                if (newSwiper.swiper) {
+                    newSwiper.swiper.destroy();
+                }
+            });
+            this.slider();
+        });
     }
 
     slider() {
-   
         this.modules.forEach(module => {
-
             let newSwiper = module.querySelector('.swiper-featured-offer');
             const swiper = new Swiper(newSwiper, {
                 modules: [Navigation, Pagination, EffectFade, Controller],
@@ -27,18 +36,24 @@ class FeaturedOffer {
                 slidesPerView: 'auto',
                 preventInteractionOnTransition: true,
                 navigation: {
-                    prevEl: module.querySelector('.featured-offer-wrap-content-swiper-navigation-prev'), // Previous button outside the swiper container
-                    nextEl: module.querySelector('.featured-offer-wrap-content-swiper-navigation-next') // Next button outside the swiper container
+                    prevEl: module.querySelector(
+                        '.featured-offer-wrap-content-swiper-navigation-prev'
+                    ), // Previous button outside the swiper container
+                    nextEl: module.querySelector(
+                        '.featured-offer-wrap-content-swiper-navigation-next'
+                    ) // Next button outside the swiper container
                 },
                 centeredSlides: true,
                 roundLengths: true,
                 loopAdditionalSlides: 30,
                 initialSlide: 1,
                 on: {
-                    slideChange: function () {
+                    slideChange: function() {
                         setTimeout(() => {
                             console.log('onchange');
-                            let content = module.querySelectorAll('.featured-offer-wrap-content-swiper-item');
+                            let content = module.querySelectorAll(
+                                '.featured-offer-wrap-content-swiper-item'
+                            );
                             content.forEach(item => {
                                 item.classList.remove('active');
                             });
@@ -46,12 +61,9 @@ class FeaturedOffer {
                         }, 200);
                     }
                 }
-  
             });
-
         });
     }
-
 }
 
 const FeaturedOfferInit = new FeaturedOffer();

@@ -16,7 +16,7 @@
             h2 {
                 width: 70%;
 
-                @include mq($until: lg) {
+                @include mq($until: xl) {
                     width: 100%;
                 }
             }
@@ -39,12 +39,8 @@
                 gap: 10px;
                 justify-content: center;
 
-                @include mq($until: lg) {
+                @include mq($until: xl) {
                     width: 80%;
-                }
-
-                @include mq($until: md) {
-                    width: 100%;
                 }
             }
 
@@ -80,20 +76,22 @@
     }
 
     .filter-card {
-        width: calc(33% - 8px);
+        flex: calc(33.3% - 18px);
+        width: calc(33.3% - 18px);
 
         @include mq($until: lg) {
-            width: calc(50% - 10px);
+            flex: calc(50% - 18px);
+            width: calc(50% - 18px);
         }
 
         @include mq($until: md) {
             width: 100%;
+            flex: 100%;
         }
 
         &-image {
             height: 265px;
             overflow: hidden;
-            aspect-ratio: 3 / 2;
 
             @include mq($until: lg) {
                 width: 100%;
@@ -107,6 +105,7 @@
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                aspect-ratio: 3 / 2;
             }
         }
 

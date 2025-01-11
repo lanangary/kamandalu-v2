@@ -8,8 +8,8 @@
     &-wrap {
         display: flex;
 
-        @include mq($until: md) {
-            flex-direction: column !important;
+        @include mq($until: lg) {
+            flex-direction: column-reverse !important;
         }
 
         &-content {
@@ -19,8 +19,14 @@
                 width: 45%;
             }
 
-            @include mq($until: md) {
+            @include mq($until: lg) {
                 width: 100%;
+
+                &:nth-child(1) {
+                    .featured-offer-wrap-content-subtitle {
+                        display: none;
+                    }
+                }
             }
 
             &-subtitle {
@@ -35,22 +41,20 @@
                     padding: 56px 30px;
                 }
 
-                @include mq($until: md) {
+                @include mq($until: lg) {
                     padding: 48px 16px;
                 }
 
                 &-item {
                     display: none;
 
-                    div.featured-offer-wrap-content-swiper-feature-devide:nth-child(2) {
-                        @include mq($until: md) {
-                            order: 3;
-                        }
-                    }
-
                     justify-content: space-between;
                     flex-direction: column;
                     min-height: 445px;
+
+                    @include mq($until: lg) {
+                        min-height: 0;
+                    }
 
                     &.active {
                         display: flex;
@@ -60,7 +64,7 @@
                 &-title {
                     margin-bottom: 48px;
 
-                    @include mq($until: md) {
+                    @include mq($until: lg) {
                         margin-bottom: 24px;
                     }
                 }
@@ -76,8 +80,8 @@
                 &-feature {
                     gap: 20px;
 
-                    @include mq($until: md) {
-                        margin-bottom: 24px;
+                    @include mq($until: lg) {
+                        margin-bottom: 34px;
                     }
 
                     &-section {
@@ -98,8 +102,10 @@
                     &-button {
                         margin-top: 32px;
 
-                        @include mq($until: xl) {
+                        @include mq($until: lg) {
+                            margin-top: 20px;
                             flex-wrap: wrap;
+                            justify-content: left;
                         }
                     }
                 }
@@ -111,8 +117,9 @@
                         margin-top: 48px;
                     }
 
-                    @include mq($until: md) {
+                    @include mq($until: lg) {
                         margin-top: 32px;
+                        gap: 24px;
                     }
                 }
             }
@@ -126,8 +133,8 @@
                 width: 55%;
             }
 
-            @include mq($until: md) {
-                height: 0px;
+            @include mq($until: lg) {
+                width: 100%;
             }
 
             .swiper {
