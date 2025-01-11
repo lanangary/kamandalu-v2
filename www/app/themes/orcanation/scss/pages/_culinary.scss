@@ -32,6 +32,11 @@
                     padding: 24px 48px;
                     border-radius: 12px;
                     margin-top: 48px;
+
+                    @include mq($until: md) {
+                        padding: 24px 24px;
+                    }
+
                     &-reservation {
                         display: flex;
                         justify-content: space-between;
@@ -64,10 +69,19 @@
                         width: 100%;
                         align-items: center;
 
+                        @include mq($until: lg) {
+                            flex-wrap: wrap;
+                            gap: 24px;
+                        }
+
                         &-section {
                             display: flex;
                             align-items: center;
                             gap: 45px;
+
+                            @include mq($until: md) {
+                                gap: 36px;
+                            }
                         }
                     }
 

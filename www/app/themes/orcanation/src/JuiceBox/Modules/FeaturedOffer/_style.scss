@@ -38,10 +38,10 @@
                 padding: 80px 45px;
 
                 @include mq($until: xl) {
-                    padding: 56px 30px;
+                    padding: 56px 64px;
                 }
 
-                @include mq($until: lg) {
+                @include mq($until: md) {
                     padding: 48px 16px;
                 }
 
