@@ -139,11 +139,14 @@ button {
         }
 
         @include mq($until: md) {
-            padding: 48px 16px;
+            padding: 0px 16px;
         }
 
         &-header {
             padding: 24px 45px;
+            @include mq($until: 'lg') {
+                padding: 0px 16px;
+            }
             height: 100%;
             display: flex;
             justify-content: center;

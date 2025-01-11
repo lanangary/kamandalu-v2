@@ -11,6 +11,10 @@
     &-wrap {
         pointer-events: all;
 
+        @include mq($until: 'lg') {
+            width: 100%;
+        }
+
         &-picker {
             max-width: 1040px;
             margin-bottom: 48px;
@@ -27,6 +31,23 @@
             justify-content: center;
             align-items: flex-end;
             gap: 30px;
+
+            @include mq($until: 'lg') {
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: baseline;
+
+                .dater-wrap {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+
+                    .qs-datepicker-conta {
+                        font-size: 1.6rem;
+                    }
+                }
+            }
 
             input {
                 height: 40px;
@@ -103,6 +124,10 @@
                 &-bullet {
                     background: white;
                     scale: 2;
+
+                    @include mq($until: 'md') {
+                        scale: 1;
+                    }
                 }
             }
         }

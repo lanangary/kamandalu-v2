@@ -90,6 +90,10 @@
         .container {
             &.con-menus {
                 padding: 64px 0px;
+
+                @include mq($until: 'lg') {
+                    padding: 32px 16px;
+                }
             }
 
             &.con-legal {
@@ -224,6 +228,10 @@
 
         .container {
             padding: 48px 0px;
+
+            @include mq($until: 'lg') {
+                padding: 24px 16px;
+            }
         }
 
         &-section {
@@ -233,6 +241,11 @@
             display: flex;
             justify-content: space-between;
             gap: 180px;
+
+            @include mq($until: 'lg') {
+                flex-direction: column-reverse;
+                gap: 24px;
+            }
         }
 
         &-content {
@@ -285,6 +298,11 @@
         &-wrap {
             display: flex;
             justify-content: space-between;
+
+            @include mq($until: 'lg') {
+                flex-direction: column;
+                gap: 32px;
+            }
         }
 
         &-section {
@@ -293,7 +311,14 @@
                 justify-content: flex-end;
                 width: 100%;
                 gap: 90px;
+
+                @include mq($until: 'lg') {
+                    gap: unset;
+                }
             }
+
+            flex-direction: column;
+            gap: unset;
         }
 
         &-item {
@@ -308,6 +333,13 @@
             &-list {
                 display: flex;
                 gap: 180px;
+
+                @include mq($until: 'md') {
+                    gap: unset;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                }
+
                 &-wrap {
                     display: flex;
                     flex-direction: column;
@@ -348,11 +380,19 @@
             display: flex;
             justify-content: space-between;
 
+            @include mq($until: 'lg') {
+                flex-direction: column;
+            }
+
             &-wrap {
                 display: flex;
                 gap: 12px;
                 justify-content: center;
                 align-items: center;
+
+                @include mq($until: 'lg') {
+                    flex-direction: column;
+                }
             }
 
             &-links {

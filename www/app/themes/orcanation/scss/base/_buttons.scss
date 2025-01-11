@@ -39,11 +39,13 @@
     width: 100%;
     font-family: 'MrEavesModOT', sans-serif;
     font-size: 24px;
+    font-size: clamp(16px, calc(24 * 100vw / 1440), 24px);
     width: auto;
     min-width: 140px;
 
-    @include mq($until: md) {
-        font-size: 20px;
+    @include mq($until: 'md') {
+        min-width: auto;
+        padding: 8px;
     }
 
     &-transparent {
@@ -71,7 +73,7 @@
     }
 
     &-mini {
-        height: 32px;
+        // height: 32px;
     }
 
     &-black {
