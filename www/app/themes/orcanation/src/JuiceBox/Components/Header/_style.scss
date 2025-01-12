@@ -426,7 +426,7 @@
                 &:last-child {
                     transition: $transition-default;
 
-                    height: 53px;
+                    height: auto;
                     .top & {
                         .mbtn-mini {
                             height: 32px;
