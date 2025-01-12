@@ -303,6 +303,7 @@ p {
 
         @include mq($until: md) {
             line-height: 110%;
+            font-size: 18px;
         }
     }
 

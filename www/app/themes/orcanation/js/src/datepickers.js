@@ -16,9 +16,9 @@ class DatePickers {
     dater() {
         let position = 'tl';
 
-        if (window.innerWidth < 768) {
-            position = 'c';
-        }
+        // if (window.innerWidth < 768) {
+        //     position = 'c';
+        // }
 
         const properties = 'idbal31692';
 
@@ -67,6 +67,12 @@ class DatePickers {
 
                 button.href = `https://www.book-secure.com/index.php?s=results&property=${properties}&arrival=${bookstart}&departure=${bookend}&adults1=1&children1=0&locale=en_GB&currency=IDR&stid=udbo2ur6g`;
             }
+        });
+
+        const daterWrap = this.modules.querySelectorAll('.dater-wrap');
+
+        daterWrap.forEach(el => {
+            el.addEventListener('click', e => {});
         });
 
         elstart.addEventListener('touchend', () => {

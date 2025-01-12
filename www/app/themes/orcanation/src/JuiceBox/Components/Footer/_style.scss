@@ -265,6 +265,10 @@
                 }
 
                 .gform_footer {
+                    @include mq($until: 'lg') {
+                        margin-top: 8px !important;
+                    }
+
                     input {
                         padding: 18px 24px !important;
                         background: white !important;
@@ -272,12 +276,24 @@
                         border-radius: 8px !important;
                         font-size: 24px !important;
                         font-family: 'MrEavesModOT', sans-serif !important;
+
+                        @include mq($until: 'lg') {
+                            font-size: 14px !important;
+                            width: auto;
+                            height: auto;
+                            display: flex;
+                            padding: 12px !important;
+                        }
                     }
                 }
             }
 
             &-title {
-                margin-bottom: clamp(16px, calc(32 * 100vw / 1440), 32px);
+                margin-bottom: clamp(8px, calc(32 * 100vw / 1440), 32px);
+
+                @include mq($until: 'lg') {
+                    font-size: 20px;
+                }
             }
         }
     }

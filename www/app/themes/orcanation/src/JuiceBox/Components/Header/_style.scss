@@ -447,7 +447,6 @@
             }
         }
     }
-
     &-slide {
         width: max-content;
         height: 100vh;
@@ -460,6 +459,12 @@
         transition: $transition-default;
         left: -75%;
         position: relative;
+
+        @include mq($until: 'lg') {
+            left: -100%;
+            height: calc(100vh - 120px);
+            width: 100%;
+        }
 
         &.slide {
             left: 0;
