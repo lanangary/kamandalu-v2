@@ -96,7 +96,7 @@
         }
 
         &-slide {
-            height: 580px;
+            height: clamp(380px, calc(580 * 100vw / 1440), 580px);
         }
 
         &-navigation {

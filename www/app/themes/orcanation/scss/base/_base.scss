@@ -81,7 +81,7 @@ body {
 }
 
 .none {
-    display: none;
+    display: none !important;
     pointer-events: none;
     z-index: -1;
 }
@@ -362,9 +362,9 @@ p {
 
     &-64 {
         font-size: 64px;
+        font-size: clamp(32px, calc(64 * 100vw / 1440), 64px);
 
         @include mq($until: md) {
-            font-size: 48px;
             line-height: normal;
         }
     }

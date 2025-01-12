@@ -112,7 +112,8 @@
 						<div class="custom-single-culinary-content-item-galery-content">
 							{% include 'GallerySlide/template.twig' with {
 							module: {
-									item: post.meta('gallery')
+									item: post.meta('gallery'),
+									style: 'croped'
 								}
 							} %}
 						</div>
@@ -150,7 +151,8 @@
 						{% include 'ServiceSlider/template.twig' with {
 							module:{
 								style: 'bordered',
-								select_item: related_post
+								select_item: related_post,
+								single: 'MORE DINING OPTIONS',
 							}
 						} %}
 					</div>
@@ -166,7 +168,8 @@
 					title: options.single_culinary.title,
 					description: options.single_culinary.description,
 					button: options.single_culinary.button,
-					background: options.single_culinary.background
+					background: options.single_culinary.background,
+					style: 'bull'
 				}
 			} %}
 			</div>

@@ -4,6 +4,10 @@
     overflow: hidden;
     position: relative;
 
+    &-title {
+        margin-bottom: 24px;
+    }
+
     .qs-datepicker {
         font-family: 'MrEavesModOT', sans-serif;
     }
@@ -24,6 +28,7 @@
                 border: solid 1px transparent;
                 padding: 8px 16px;
                 border-radius: 4px;
+                text-align: center;
                 min-width: 106px;
             }
 
@@ -147,6 +152,10 @@
         align-items: center;
         justify-content: center;
         padding-bottom: 48px;
+
+        @include mq($until: 'lg') {
+            padding-bottom: 64px;
+        }
     }
 }
 
@@ -155,11 +164,15 @@
     height: auto;
 
     &-title {
-        margin-bottom: 48px;
+        margin-bottom: clamp(24px, calc(48 * 100vw / 1440), 48px);
     }
 
     &-desc {
         width: 80%;
+
+        @include mq($until: 'lg') {
+            width: 100%;
+        }
     }
 
     &-wrap {

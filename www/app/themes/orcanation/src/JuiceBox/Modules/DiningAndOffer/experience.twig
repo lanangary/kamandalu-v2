@@ -2,15 +2,18 @@
 	<div class="container">
 		<div class="dining-and-offer-wrap">
 			<div class="dining-and-offer-heading">
-				<div class="dining-and-offer-heading-title ">
-					<h2 class="t-center plantin t-72 color-grey t-italic lh-110">
-						{{module.title}}
-					</h2>
-				</div>
-				<div class="dining-and-offer-heading-desc">
-					{{module.description}}
-				</div>
-
+				{% if module.title %}
+					<div class="dining-and-offer-heading-title ">
+						<h2 class="t-center plantin t-72 color-grey t-italic lh-110">
+							{{module.title}}
+						</h2>
+					</div>
+				{% endif %}
+				{% if module.description %}
+					<div class="dining-and-offer-heading-desc">
+						{{module.description}}
+					</div>
+				{% endif %}
 			</div>
 			<div class="dining-and-offer-content">
 				<div class="dining-and-offer-content-wrap">

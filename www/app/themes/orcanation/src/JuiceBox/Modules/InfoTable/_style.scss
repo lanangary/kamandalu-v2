@@ -32,8 +32,9 @@
     }
 
     .table-item {
-        width: 200px;
-        min-width: 200px;
+        width: clamp(130px, calc(200 * 100vw / 1440), 200px);
+        min-width: clamp(130px, calc(200 * 100vw / 1440), 200px);
+
         display: flex;
         justify-content: center;
         align-items: center;

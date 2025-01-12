@@ -4,6 +4,7 @@
             display: flex;
             justify-content: center;
             margin-bottom: 64px;
+            margin-bottom: clamp(32px, calc(64 * 100vw / 1440), 64px);
 
             @include mq($until: lg) {
                 margin-bottom: 48px;
@@ -64,14 +65,7 @@
             display: flex;
             flex-wrap: wrap;
             row-gap: 80px;
-
-            @include mq($until: lg) {
-                row-gap: 64px;
-            }
-
-            @include mq($until: md) {
-                row-gap: 56px;
-            }
+            row-gap: clamp(32px, calc(80 * 100vw / 1440), 80px);
         }
     }
 
@@ -133,9 +127,12 @@
 
     &.style-experience {
         .filter-card {
+            display: flex;
             &-title {
                 margin-top: 24px;
+                margin-top: clamp(16px, calc(32 * 100vw / 1440), 32px);
                 margin-bottom: 36px;
+                margin-bottom: clamp(20px, calc(36 * 100vw / 1440), 36px);
             }
             &-button {
                 &-wrap {
@@ -143,6 +140,7 @@
                     gap: 8px;
                     align-items: flex-end;
                     margin-top: 36px;
+                    margin-top: clamp(20px, calc(36 * 100vw / 1440), 36px);
                 }
 
                 &-details {
@@ -185,13 +183,20 @@
             }
             &-wrap {
                 display: flex;
-                padding: 75px;
-                gap: 68px;
+
+                padding: clamp(32px, calc(75 * 100vw / 1440), 75px);
+                gap: clamp(32px, calc(68 * 100vw / 1440), 68px);
 
                 position: relative;
                 background: white;
                 width: 80vw;
-                height: 85vh;
+                height: auto;
+
+                @include mq($until: lg) {
+                    flex-direction: column;
+                    padding: 24px;
+                    gap: 16px;
+                }
             }
 
             &-section {
@@ -200,16 +205,22 @@
                 &-image {
                     aspect-ratio: 1.1;
                     width: 100%;
+                    height: 100%;
                 }
 
                 &-content {
                     &-title {
-                        margin-bottom: 32px;
+                        margin-bottom: clamp(16px, calc(32 * 100vw / 1440), 32px);
                     }
 
                     &-desc {
                         max-height: 350px;
                         overflow: auto;
+
+                        @include mq($until: lg) {
+                            max-height: 19vh;
+                            overflow: auto;
+                        }
                     }
 
                     &-button {

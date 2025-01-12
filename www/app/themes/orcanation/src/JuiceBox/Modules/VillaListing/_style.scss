@@ -78,6 +78,11 @@
 
                     .icon {
                         cursor: pointer;
+
+                        @include mq($until: 'lg') {
+                            width: 12px;
+                            height: auto;
+                        }
                     }
                 }
             }
@@ -99,6 +104,13 @@
 
             &-description {
                 margin-bottom: 24px;
+
+                max-height: 220px;
+                overflow-y: auto;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
             }
 
             &-feature {
