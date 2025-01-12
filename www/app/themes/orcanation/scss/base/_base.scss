@@ -335,7 +335,7 @@ p {
 
     &-36 {
         font-size: 36px;
-        font-size: clamp(28px, calc(36 * 100vw / 1440), 36px);
+        font-size: clamp(24px, calc(36 * 100vw / 1440), 36px);
 
         @include mq($until: lg) {
             line-height: 110%;
@@ -380,6 +380,10 @@ p {
 
     &-96 {
         font-size: 96px;
+        @include mq($until: 'lg') {
+            font-size: 40px;
+            line-height: 100%;
+        }
     }
 }
 

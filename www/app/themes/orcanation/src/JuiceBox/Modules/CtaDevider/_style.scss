@@ -1,5 +1,5 @@
 .cta-devider {
-    height: 680px;
+    height: clamp(380px, calc(680 * 100vw / 1440), 680px);
     overflow: hidden;
     position: relative;
     display: flex;
@@ -43,11 +43,11 @@
     }
 
     &-title {
-        margin-bottom: 24px;
+        margin-bottom: clamp(18px, calc(24 * 100vw / 1440), 24px);
     }
 
     &-desc {
-        margin-bottom: 64px;
+        margin-bottom: clamp(32px, calc(64 * 100vw / 1440), 64px);
     }
 }
 
