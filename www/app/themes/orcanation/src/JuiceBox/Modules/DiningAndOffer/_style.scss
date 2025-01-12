@@ -180,6 +180,10 @@
                 right: 45px;
                 top: 45px;
                 cursor: pointer;
+
+                @include mq($until: md) {
+                    position: fixed;
+                }
             }
             &-wrap {
                 display: flex;

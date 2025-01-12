@@ -10,8 +10,8 @@
         align-items: center;
         gap: 120px;
 
-        @include mq($until: md) {
-            flex-direction: column !important;
+        @include mq($until: lg) {
+            flex-direction: column-reverse !important;
             gap: 24px;
         }
     }
@@ -93,6 +93,7 @@
                     @include mq($until: md) {
                         right: -5px;
                         top: 42%;
+                        scale: 1;
                     }
                 }
 
@@ -104,6 +105,7 @@
                     @include mq($until: md) {
                         left: -5px;
                         top: 42%;
+                        scale: 1;
                     }
                 }
             }

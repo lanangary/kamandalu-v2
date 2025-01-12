@@ -58,9 +58,16 @@ class DiningAndOffer {
 
         const popup = document.querySelector('.experience-popup');
         let close = popup.querySelector('.experience-popup-close');
+        const header = document.querySelector('#main-header');
+        const body = document.querySelector('body');
 
         close.addEventListener('click', () => {
             popup.classList.remove('active');
+
+            header.classList.remove('scroll-down');
+            header.classList.add('scroll-up');
+
+            body.style.overflow = 'auto';
         });
 
         this.modules.forEach(module => {
@@ -98,6 +105,11 @@ class DiningAndOffer {
                     ).innerHTML = buttonlink.innerHTML;
 
                     popup.classList.add('active');
+
+                    header.classList.add('scroll-down');
+                    header.classList.remove('scroll-up');
+
+                    body.style.overflow = 'hidden';
                 });
             });
         });
