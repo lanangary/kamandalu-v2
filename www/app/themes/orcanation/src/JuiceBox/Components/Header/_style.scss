@@ -401,7 +401,7 @@
                 align-items: center;
                 scale: 1;
 
-                @include mq($until: 'lg') {
+                @include mq($until: 'xl') {
                     display: none;
                 }
             }
@@ -482,6 +482,12 @@
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
+
+                            svg {
+                                path {
+                                    stroke: black !important;
+                                }
+                            }
                         }
 
                         &.nav__item--1 {

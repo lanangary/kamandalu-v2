@@ -293,6 +293,7 @@
 
                 @include mq($until: 'lg') {
                     font-size: 20px;
+                    line-height: 110%;
                 }
             }
         }
@@ -355,6 +356,12 @@
                 @include mq($until: 'md') {
                     gap: unset;
                     justify-content: space-between;
+                    flex-wrap: wrap;
+                }
+
+                .menu-social-item {
+                    display: flex;
+                    gap: 12px;
                     flex-wrap: wrap;
                 }
 
