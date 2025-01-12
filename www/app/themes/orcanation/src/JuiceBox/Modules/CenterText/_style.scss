@@ -2,7 +2,7 @@
     &-content {
         width: 80%;
 
-        @include mq($until: md) {
+        @include mq($until: 'xl') {
             width: 100%;
         }
 
@@ -17,7 +17,7 @@
             em {
                 font-style: italic;
                 font-family: 'Plantin', serif;
-                font-size: 40px;
+                font-size: clamp(24px, calc(40 * 100vw / 1440), 40px);
                 line-height: 120%;
             }
         }

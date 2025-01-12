@@ -184,6 +184,6 @@
 
     .container {
         align-items: flex-start;
-        padding-top: 166px;
+        padding-top: clamp(120px, calc(166 * 100vw / 1440), 166px);
     }
 }
