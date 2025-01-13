@@ -23,6 +23,13 @@
     </div>
 
     <div class="page-wrap" id="main-content">
+
+{% if options.global_popup %}
+    {% include "partials/popup.twig" with {
+        popup: options.global_popup.items
+    } %}
+{% endif %}
+
         {% block page %}
             <main>
                 <div class="content-wrap">

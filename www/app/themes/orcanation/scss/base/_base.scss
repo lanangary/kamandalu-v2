@@ -405,3 +405,126 @@ p {
         height: auto;
     }
 }
+
+// global popup
+
+.global-popup {
+    display: none;
+    position: fixed;
+    right: -100%;
+    bottom: 40px;
+    height: 112px;
+    aspect-ratio: 3 / 1;
+    overflow: hidden;
+    background-color: #404040;
+    transition: all ease-in-out 0.6s;
+    z-index: 99;
+
+    &-close {
+        display: none;
+    }
+
+    &.stop {
+        display: none !important;
+    }
+
+    &.show {
+        height: 400px;
+        aspect-ratio: 3 / 4;
+        display: flex;
+        right: 0px;
+
+        .global-popup-close {
+            position: absolute;
+            display: flex;
+            top: 0;
+            right: 0;
+            background: white;
+            border-radius: 0% 0% 0% 25%;
+        }
+
+        .global-popup-preview {
+            flex-direction: column;
+
+            &-image {
+                aspect-ratio: 3 / 1;
+                width: 100%;
+            }
+
+            &-content {
+                width: 100%;
+                gap: 12px;
+                height: 100%;
+
+                &-title {
+                    height: 100%;
+                }
+
+                &-description {
+                    height: 100%;
+                    overflow: visible;
+                    max-height: 200px;
+                    width: 100%;
+                }
+
+                &-link {
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    &.active {
+        display: flex;
+        right: 0px;
+    }
+
+    &-wrap {
+        width: 100%;
+    }
+
+    &-preview {
+        display: flex;
+        height: 100%;
+        width: 100%;
+
+        &-image {
+            height: 100%;
+            aspect-ratio: 1 / 1;
+
+            transition: all ease-in-out 0.6s;
+        }
+
+        &-content {
+            width: 80%;
+            padding: 20px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            transition: all ease-in-out 0.6s;
+
+            &-title {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: 85%;
+                transition: all ease-in-out 0.6s;
+            }
+
+            &-description {
+                height: 100%;
+                overflow: hidden;
+                max-height: 0px;
+                transition: all ease-in-out 0.6s;
+            }
+
+            &-link {
+                a {
+                    color: white;
+                }
+            }
+        }
+    }
+}

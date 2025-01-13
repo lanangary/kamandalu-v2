@@ -122,3 +122,67 @@ function toogleSubMenu() {
 }
 
 window.addEventListener('load', toogleSubMenu);
+
+function globalpopup() {
+    const popup = document.querySelectorAll('.global-popup');
+
+    popup.forEach(item => {
+        let close = item.querySelector('.global-popup-close');
+        close.addEventListener('click', () => {
+            item.classList.add('stop');
+        });
+
+        let open = item.querySelector('.global-popup-preview-content-link a');
+        open.addEventListener('click', e => {
+            if (!item.classList.contains('show')) {
+                e.preventDefault(); // Prevents the default link behavior
+                e.stopPropagation(); // Prevents the event from bubbling up
+            }
+
+            popup.forEach(item => {
+                item.classList.add('stop');
+            });
+
+            item.classList.remove('stop');
+            item.classList.add('show');
+        });
+    });
+
+    const popupLength = popup.length;
+    let index = 0;
+    console.log('start');
+
+    const intervalId = setInterval(() => {
+        console.log('index');
+
+        let isstop = activepopup(index);
+        index++;
+
+        if (index === popupLength) {
+            index = 0;
+        }
+
+        if (isstop) {
+            // remove interval
+            clearInterval(intervalId);
+        }
+    }, 6000);
+}
+
+function activepopup(index) {
+    let popup = document.querySelectorAll('.global-popup');
+
+    popup.forEach(item => {
+        item.classList.remove('active');
+    });
+
+    popup[index].classList.add('active');
+
+    if (popup[index].classList.contains('show')) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+window.addEventListener('load', globalpopup);

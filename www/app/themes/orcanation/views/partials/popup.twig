@@ -1,0 +1,27 @@
+{% for item in popup %}
+	<div class="global-popup {{loop.index == 1 ? 'active' : ''}}">
+		<div class="global-popup-wrap">
+			<div class="global-popup-close">
+				{% include "img/close-icon.twig" %}
+			</div>
+			<div class="global-popup-preview">
+				<div class="global-popup-preview-image">
+					{% include "partials/image.twig" with{
+                        "image": item.image
+                    } %}
+				</div>
+				<div class="global-popup-preview-content">
+					<div class="global-popup-preview-content-title plantin t-italic t-20">
+						{{item.title}}
+					</div>
+					<div class="global-popup-preview-content-description eaves t-16">
+						{{item.description|wpautop}}
+					</div>
+					<div class="global-popup-preview-content-link eaves t-16">
+						<a href="{{item.link.url}}" target="_blank" rel="noopener noreferrer">{{item.link.title}}</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endfor %}
