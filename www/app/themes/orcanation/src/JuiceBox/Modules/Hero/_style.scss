@@ -5,7 +5,7 @@
     position: relative;
 
     &-title {
-        margin-bottom: 24px;
+        margin-bottom: 48px;
     }
 
     .qs-datepicker {
@@ -62,6 +62,10 @@
                 padding: 16px;
                 min-width: 30vw;
                 color: white;
+
+                &::placeholder {
+                    color: white;
+                }
             }
         }
     }
@@ -184,6 +188,6 @@
 
     .container {
         align-items: flex-start;
-        padding-top: clamp(120px, calc(166 * 100vw / 1440), 166px);
+        padding-top: clamp(150px, calc(166 * 100vw / 1440), 166px);
     }
 }

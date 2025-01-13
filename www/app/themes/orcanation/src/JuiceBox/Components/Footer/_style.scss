@@ -256,7 +256,7 @@
 
                 .ginput_container {
                     input {
-                        height: clamp(45px, calc(60 * 100vw / 1440), 60px) !important;
+                        height: clamp(45px, calc(60 * 100vw / 720), 60px) !important;
                         border-radius: 8px !important;
                         font-family: 'MrEavesModOT', sans-serif !important;
                         font-size: clamp(16px, calc(20 * 100vw / 1440), 20px) !important;
@@ -270,11 +270,11 @@
                     }
 
                     input {
-                        padding: 18px 24px !important;
+                        padding: 14px 16px !important;
                         background: white !important;
                         color: black !important;
                         border-radius: 8px !important;
-                        font-size: 24px !important;
+                        font-size: 20px !important;
                         font-family: 'MrEavesModOT', sans-serif !important;
 
                         @include mq($until: 'lg') {
@@ -289,7 +289,7 @@
             }
 
             &-title {
-                margin-bottom: clamp(8px, calc(32 * 100vw / 1440), 32px);
+                margin-bottom: clamp(8px, calc(18 * 100vw / 1440), 18px);
 
                 @include mq($until: 'lg') {
                     font-size: 20px;

@@ -489,6 +489,12 @@ p {
     &.active {
         display: flex;
         right: 0px;
+
+        .global-popup-preview-content {
+            &::after {
+                width: 100%;
+            }
+        }
     }
 
     &-wrap {
@@ -516,6 +522,19 @@ p {
             align-items: flex-start;
             justify-content: space-between;
             transition: all ease-in-out 0.6s;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0%;
+                height: 3px;
+                background: white;
+                z-index: 1;
+                transition: width ease-in-out 6s;
+            }
 
             &-title {
                 white-space: nowrap;
