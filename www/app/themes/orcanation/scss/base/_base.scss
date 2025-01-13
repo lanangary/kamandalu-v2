@@ -420,6 +420,18 @@ p {
     transition: all ease-in-out 0.6s;
     z-index: 99;
 
+    &-outer {
+        opacity: 0;
+        transition: all ease-in-out 0.6s;
+        pointer-events: none;
+        z-index: 99;
+
+        &.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+    }
+
     &-close {
         display: none;
     }

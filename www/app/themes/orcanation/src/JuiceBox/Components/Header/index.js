@@ -125,12 +125,19 @@ window.addEventListener('load', toogleSubMenu);
 
 function globalpopup() {
     const popup = document.querySelectorAll('.global-popup');
+    const outer = document.querySelector('.global-popup-outer');
+
+    // after 10 seconds, add active class
+    setTimeout(() => {
+        outer.classList.add('active');
+    }, 10000);
 
     popup.forEach(item => {
         item.classList.add('active');
         let close = item.querySelector('.global-popup-close');
         close.addEventListener('click', () => {
             item.classList.add('stop');
+            outer.classList.remove('active');
         });
 
         let open = item.querySelector('.global-popup-preview-content-link a');

@@ -31,9 +31,11 @@
 
 
 				{% if options.global_popup %}
-					{% include "partials/popup.twig" with {
+					<div class="global-popup-outer">
+						{% include "partials/popup.twig" with {
                         popup: options.global_popup.items
                     } %}
+					</div>
 				{% endif %}
 
 				{% block page %}
