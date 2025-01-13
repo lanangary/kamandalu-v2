@@ -589,7 +589,7 @@
                         "id": ""
                     },
                     "relevanssi_exclude": 0,
-                    "layout": "table",
+                    "layout": "row",
                     "pagination": 0,
                     "min": 0,
                     "max": 0,
@@ -707,7 +707,7 @@
                             "relevanssi_exclude": 0,
                             "choices": {
                                 "all": "All",
-                                "villa": "Villas",
+                                "villas": "Villas",
                                 "culinary": "Culinary",
                                 "spa": "Spa",
                                 "only": "Specific Page Only"
@@ -784,5 +784,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1736728869
+    "modified": 1736779325
 }

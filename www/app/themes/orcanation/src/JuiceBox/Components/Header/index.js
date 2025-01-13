@@ -127,6 +127,7 @@ function globalpopup() {
     const popup = document.querySelectorAll('.global-popup');
 
     popup.forEach(item => {
+        item.classList.add('active');
         let close = item.querySelector('.global-popup-close');
         close.addEventListener('click', () => {
             item.classList.add('stop');
