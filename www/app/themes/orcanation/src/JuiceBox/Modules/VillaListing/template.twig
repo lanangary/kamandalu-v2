@@ -8,8 +8,7 @@
 			{% endif %}
 
 			{% for item in module.select_item %}
-
-				<div class="villa-listing-section">
+				<div class="villa-listing-section" id="{{item.id}}">
 					<div class="villa-listing-section-image">
 						{% include 'VillaListing/swiper.twig' with {
                             class: 'swiper-'~loop.index,

@@ -42,50 +42,64 @@
 			<div class="container">
 				<div class="custom-single-spa-content">
 					<div class="custom-single-spa-content-item">
-						<div class="custom-single-spa-content-item-def">
-							<div class="custom-single-spa-content-item-def-value">
-								<span class="custom-single-spa-content-item-def-value-title plantin t-italic color-grey t-22">
-									Time
-								</span>
-								<div class="custom-single-spa-content-item-def-value-content eaves t-20 color-grey">
-									{{post.meta('time')}}
+						{% if post.meta('time') is not empty %}
+							<div class="custom-single-spa-content-item-def">
+								<div class="custom-single-spa-content-item-def-value">
+									<span class="custom-single-spa-content-item-def-value-title plantin t-italic color-grey t-22">
+										Time
+									</span>
+									<div class="custom-single-spa-content-item-def-value-content eaves t-20 color-grey">
+										{{post.meta('time')}}
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="custom-single-spa-content-item-def">
-							<div class="custom-single-spa-content-item-def-value">
-								<span class="custom-single-spa-content-item-def-value-title plantin t-italic color-grey t-22">
-									Includes
-								</span>
-								<div class="custom-single-spa-content-item-def-value-content eaves t-20 color-grey">
-									{{post.meta('include')|wpautop}}
+						{% endif %}
+						{% if post.meta('include') is not empty %}
+							<div class="custom-single-spa-content-item-def">
+								<div class="custom-single-spa-content-item-def-value">
+									<span class="custom-single-spa-content-item-def-value-title plantin t-italic color-grey t-22">
+										Includes
+									</span>
+									<div class="custom-single-spa-content-item-def-value-content eaves t-20 color-grey">
+										{{post.meta('include')|wpautop}}
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="custom-single-spa-content-item-def">
-							<div class="custom-single-spa-content-item-def-value">
-								<span class="custom-single-spa-content-item-def-value-title plantin t-italic color-grey t-22">
-									Reservation
-								</span>
-								<div class="custom-single-spa-content-item-def-value-content eaves t-22 color-grey">
-									{{options.options_spa.reservation_content|wpautop}}
+						{% endif %}
+						{% if options.options_spa.reservation_content is not empty %}
+							<div class="custom-single-spa-content-item-def">
+								<div class="custom-single-spa-content-item-def-value">
+									<span class="custom-single-spa-content-item-def-value-title plantin t-italic color-grey t-22">
+										Reservation
+									</span>
+									<div class="custom-single-spa-content-item-def-value-content eaves t-22 color-grey">
+										{{options.options_spa.reservation_content|wpautop}}
+									</div>
 								</div>
 							</div>
-						</div>
+						{% endif %}
 					</div>
 					<div class="custom-single-spa-content-item">
-						<div class="custom-single-spa-content-item-intro plantin color-grey t-40 t-italic lh-110">
+						<div class="custom-single-spa-content-item-intro eaves color-grey t-24 t-italic lh-110">
 							{{post.meta('introduction')|wpautop}}
 						</div>
 						<div class="custom-single-spa-content-item-button">
-							{% include 'partials/button.twig' with{
-							link: post.meta('booking_link'),	
-							style: 'mbtn mbtn-transparent-black'
-						} %}
-							{% include 'partials/button.twig' with{
-							link: post.meta('booking_link'),	
-							style: 'mbtn mbtn-gold'
-						} %}
+							{% if post.meta('booking_link') is not empty %}
+								{% include 'partials/button.twig' with{
+									link: post.meta('booking_link'),	
+									style: 'mbtn mbtn-transparent-black'
+								} %}
+							{% endif %}
+
+
+							{% if options.options_spa.additional_button is not empty %}
+								{% include 'partials/button.twig' with{
+									link: options.options_spa.additional_button,	
+									style: 'mbtn mbtn-gold'
+								} %}
+							{% endif %}
+
+
 						</div>
 					</div>
 				</div>

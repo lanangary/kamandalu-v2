@@ -39,8 +39,14 @@
 			<div class="swiper swiper-service">
 				<div class="swiper-wrapper">
 					{% for item in module.select_item %}
+
+						{% if item.post_type == 'offers' %}
+							{% set links = '/offer/#'~ item.id %}
+						{% else %}
+							{% set links = item.link %}
+						{% endif %}
 						<div class="swiper-slide">
-							<a href="{{item.link}}" class="service-slider-item">
+							<a href="{{links}}" class="service-slider-item">
 								<div class="service-slider-item-image">
 									{% include 'partials/image.twig' with{
 								'image': item.thumbnail,

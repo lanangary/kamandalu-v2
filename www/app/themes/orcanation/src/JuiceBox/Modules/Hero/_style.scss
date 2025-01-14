@@ -5,7 +5,9 @@
     position: relative;
 
     &-title {
-        margin-bottom: 48px;
+        @include mq($until: 'lg') {
+            margin-bottom: 48px;
+        }
     }
 
     .qs-datepicker {
@@ -21,7 +23,11 @@
 
         &-picker {
             max-width: 1040px;
-            margin-bottom: 48px;
+
+            @include mq($until: 'lg') {
+                margin-bottom: 48px;
+            }
+
             .datergater {
                 background-color: white;
                 color: black;

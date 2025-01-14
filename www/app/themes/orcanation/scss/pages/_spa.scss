@@ -20,6 +20,12 @@
                 &-intro {
                     margin-bottom: 45px;
 
+                    p {
+                        em {
+                            font-family: 'Plantin', serif;
+                        }
+                    }
+
                     @include mq($until: md) {
                         p {
                             font-size: 24px;
