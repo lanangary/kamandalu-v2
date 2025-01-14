@@ -10,6 +10,14 @@
 					<div class="text-slider-content-description eaves t-20 lh-100 color-grey">
 						{{module.content}}
 					</div>
+					{% if module.button %}
+						<div class="text-slider-content-button">
+							{% include "partials/button.twig" with{
+							'link': module.button,
+							style: 'mbtn mbtn-gold'
+						} %}
+						</div>
+					{% endif %}
 				</div>
 			</div>
 

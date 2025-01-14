@@ -1480,6 +1480,24 @@
                             "delay": 0
                         },
                         {
+                            "key": "field_67865cf817acb",
+                            "label": "Button",
+                            "name": "button",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "relevanssi_exclude": 0,
+                            "return_format": "array",
+                            "allow_in_bindings": 0
+                        },
+                        {
                             "key": "field_677a8a38e3392",
                             "label": "Images",
                             "name": "images",
@@ -1781,5 +1799,5 @@
     "description": "",
     "show_in_rest": 0,
     "private": true,
-    "modified": 1736263509
+    "modified": 1736858889
 }

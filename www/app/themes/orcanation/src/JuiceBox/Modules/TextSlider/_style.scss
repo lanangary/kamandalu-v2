@@ -27,6 +27,20 @@
 
         &-description {
             line-height: 140%;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            @include mq($from: lg) {
+                max-height: 400px;
+                overflow: auto;
+            }
+        }
+
+        &-button {
+            display: flex;
+            margin-top: 24px;
         }
     }
 
