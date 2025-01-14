@@ -74,7 +74,10 @@ jQuery($ => {
 
     hasChild.forEach(item => {
         item.addEventListener('click', e => {
-            e.preventDefault();
+            console.log(e.currentTarget);
+            if (!e.currentTarget.classList.contains('open')) {
+                e.preventDefault();
+            }
 
             item.classList.toggle('open');
 
