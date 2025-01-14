@@ -16,17 +16,17 @@
                         } %}
 					</div>
 					<div class="villa-listing-section-content">
-						<div class="villa-listing-section-content-title plantin t-40 t-italic color-grey">
+						<div class="villa-listing-section-content-title plantin t-40 t-italic color-grey lh-110">
 							{{item.title}}
 						</div>
 
 
 						{% if module.post_type == 'villa' %}
-							<div class="villa-listing-section-content-description eaves t-20 color-grey">
+							<div class="villa-listing-section-content-description eaves t-20 color-grey lh-110">
 								{{item.post_excerpt}}
 							</div>
 						{% else %}
-							<div class="villa-listing-section-content-description eaves t-20 color-grey">
+							<div class="villa-listing-section-content-description eaves t-20 color-grey lh-110">
 								{{item.post_content|wpautop}}
 							</div>
 

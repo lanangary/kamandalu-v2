@@ -146,7 +146,7 @@ button {
         &-header {
             padding: 24px 45px;
             @include mq($until: 'lg') {
-                padding: 0px 32px;
+                padding: 0px 22px;
             }
             height: 100%;
             display: flex;
