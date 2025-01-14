@@ -29,6 +29,15 @@
 
 			<div class="page-wrap" id="main-content">
 
+				{% if post.title == 'Home' %}
+					{% if options.global_popup.home_popup %}
+						<div class="global-popup-home">
+							{% include "partials/popup-home.twig" with {
+							popup: options.global_popup.home_popup
+						} %}
+						</div>
+					{% endif %}
+				{% endif %}
 
 				{% if options.global_popup %}
 					<div class="global-popup-outer">
@@ -37,6 +46,7 @@
                     } %}
 					</div>
 				{% endif %}
+
 
 				{% block page %}
 					<main>

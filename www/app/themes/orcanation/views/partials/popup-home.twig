@@ -1,0 +1,26 @@
+<div class="global-popup-home-wrap">
+	<div class="global-popup-home-image">
+		{% include "partials/image.twig" with{
+			'image': popup.image,
+		} %}
+		<div class="global-popup-home-image-close">
+			{% include "img/header-icon/close-toogle.svg" %}
+		</div>
+	</div>
+	<div class="global-popup-home-content">
+		<div class="global-popup-home-content-inner">
+			<div class="global-popup-home-content-title plantin t-40 color-white t-italic">
+				{{popup.title}}
+			</div>
+			<div class="global-popup-home-content-description eaves t-24 lh-100 color-white">
+				{{popup.description|wpautop}}
+			</div>
+			<div class="global-popup-home-content-button">
+				{% include 'partials/button.twig' with{
+					'link': popup.button,
+					'style': 'mbtn mbtn-gold border-12 t-uppercase eaves t-20'
+				} %}
+			</div>
+		</div>
+	</div>
+</div>
