@@ -389,6 +389,10 @@
         width: auto;
         transition: $transition-default;
 
+        @include mq($from: 'xl') {
+            min-width: 135px;
+        }
+
         @include mq($until: 'lg') {
             width: 100%;
         }

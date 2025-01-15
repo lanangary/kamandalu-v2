@@ -212,13 +212,17 @@ function homePopup() {
     let popup = document.querySelector('.global-popup-home');
     let close = document.querySelector('.global-popup-home-image-close');
 
-    setTimeout(() => {
-        popup.classList.add('active');
-    }, 3000);
+    if (popup) {
+        setTimeout(() => {
+            popup.classList.add('active');
+        }, 3000);
+    }
 
-    close.addEventListener('click', () => {
-        popup.classList.remove('active');
-    });
+    if (close) {
+        close.addEventListener('click', () => {
+            popup.classList.remove('active');
+        });
+    }
 }
 
 window.addEventListener('load', homePopup);

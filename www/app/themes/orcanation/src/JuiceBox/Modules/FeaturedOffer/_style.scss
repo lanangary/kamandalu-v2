@@ -83,6 +83,7 @@
 
                 &-feature {
                     gap: 20px;
+                    color: $grey;
 
                     @include mq($until: lg) {
                         margin-bottom: 34px;
@@ -97,6 +98,10 @@
                             @include mq($until: md) {
                                 width: 20px;
                                 height: auto;
+                            }
+
+                            path {
+                                stroke: $grey;
                             }
                         }
                     }
