@@ -1,5 +1,5 @@
 {% for item in menu.get_items %}
-	<a href="{{ item.link }}" class="item__link">
+	<a href="{{ item.link }}" class="item__link" data-parentid="{{ loop.index }}">
 		<span class="item__title">{{ item }}</span>
 	</a>
 {% endfor %}

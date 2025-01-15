@@ -222,3 +222,38 @@ function homePopup() {
 }
 
 window.addEventListener('load', homePopup);
+
+function childopen() {
+    const parentwrap = document.querySelector('.header-section-wrap-menu');
+    const parentitem = parentwrap.querySelectorAll('.item__link');
+    const childitem = document.querySelectorAll(
+        '.header-section-wrap-menu-child-section'
+    );
+
+    // hover listener
+    parentitem.forEach(item => {
+        item.addEventListener('mouseover', () => {
+            console.log('hover');
+
+            childitem.forEach(child => {
+                // get item data-parent-id atr
+                let parentid = item.getAttribute('data-parentid');
+
+                if (child.getAttribute('data-id') === parentid) {
+                    child.classList.add('active');
+                } else {
+                    child.classList.remove('active');
+                }
+            });
+        });
+    });
+
+    // mouse leave listener
+    childitem.forEach(item => {
+        item.addEventListener('mouseleave', () => {
+            item.classList.remove('active');
+        });
+    });
+}
+
+window.addEventListener('load', childopen);
